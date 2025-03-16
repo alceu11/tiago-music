@@ -57,7 +57,33 @@ body,td,th {
 }
 </style>
 
-<style type="text/css">
+ <style type="text/css">
+ @media (max-width: 768px) {
+.container {
+flex-direction: column;
+}.sidebar {
+display: none;
+}.main-content {
+flex: 1;
+}
+} 
+@media (min-width: 769px) and (max-width: 1024px) {
+.container {
+flex-direction: column;
+}.sidebar {
+order: 1;
+}.main-content {
+order: 2;
+}
+}
+@media (min-width: 1025px) {
+.container {
+flex-direction: row;
+}.sidebar {
+display: block;
+}
+}
+</style>
 
 
 
@@ -133,19 +159,19 @@ margin-left: 5px;
 
 <h3 style="text-align: center;">
 
-<a href="index.html">  <button style="background-color:#199319;color:white;"><h4>  Gospel </h4> </button></a>
+<a href="index.html">  <button style="background-color:#199319;color:white;"><h4>Gospel </h4> </button></a>
 
 
 
 
 
-<a  href="ita2.html"><button style="background-color:blue;color:white;"><h4>  Italia-</h4> </button></a>
+<a  href="ita2.html"><button style="background-color:blue;color:white;"><h4>Italia</h4> </button></a>
 
 <a  title=" Nacional" href="nac2.html"><button style="background-color:red;color:white;"><h4>  Mpb-</h4> </button></a>
 
 
 
-<a  href="inter22.html"><button style="background-color:green;color:cyan;"><h4>  Internacional </h4> </button></a>
+<a  href="inter22.html"><button style="background-color:green;color:cyan;"><h4>  Inter </h4> </button></a>
 
 <a  title="Video Setanejas" href="sert2.html"><button style="background-color:blue;color:white;"><h4>  Sertaneja </h4>  </button></a>
 

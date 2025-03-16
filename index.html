@@ -56,9 +56,33 @@ body,td,th {
  
 }
 </style>
-
 <style type="text/css">
-
+ @media (max-width: 768px) {
+.container {
+flex-direction: column;
+}.sidebar {
+display: none;
+}.main-content {
+flex: 1;
+}
+} 
+@media (min-width: 769px) and (max-width: 1024px) {
+.container {
+flex-direction: column;
+}.sidebar {
+order: 1;
+}.main-content {
+order: 2;
+}
+}
+@media (min-width: 1025px) {
+.container {
+flex-direction: row;
+}.sidebar {
+display: block;
+}
+}
+</style>
 
 
 <style type="text/css">
@@ -81,6 +105,8 @@ color:#c9ae63;
 background-color:;
 text-decoration:none;
 }
+
+
 </style>
 
 
@@ -139,17 +165,17 @@ margin-left: 5px;
 <a title="Gospel video" href="index.html">  <button style="background-color:#199319;color:white;"><h4>Gospel</h4> </button></a>
 
 
-<a title="Video Mpb"  href="nac2.html"><button style="background-color:cyan;color:#000;"><h4> Mpb </h4> </button></a>
+<a title="Video Mpb"  href="nac2.html"><button style="background-color:cyan;color:#000;"><h4>Mpb </h4> </button></a>
 
-<a title="Video Italia"  href="ita2.html"><button style="background-color:green;color:white;"><h4> Italia</h4> </button></a>
+<a title="Video Italia"  href="ita2.html"><button style="background-color:green;color:white;"><h4>Italia</h4> </button></a>
 
-<a  title="Video Internacional" href="inter22.html"><button style="background-color:orange;color:white;"> <h4> Inter </h4></button></a>
+<a  title="Video Internacional" href="inter22.html"><button style="background-color:orange;color:white;"> <h4>Inter </h4></button></a>
 
 
 
 <a  title="Video Setanejas" href="sert2.html"><button style="background-color:blue;color:white;">  <h4>Sertaneja</h4> </button></a>
 
-<a title="Video Latina" href="lat22.html"> <button style="background-color:green;color:white;"><h3> Latina </h3></button></a>
+<a title="Video Latina" href="lat22.html"> <button style="background-color:green;color:white;"><h4> Latina </h4></button></a>
 
 <a  title=" Instrumental"  href="int22.html"><button style="background-color:orange;color: white;"><h4>  Classic </h4> </button></a>
 
