@@ -42,28 +42,38 @@ function doSearch(text) {
 
 
  <style>
-BODY{
-  scrollbar-3d-light-color:#000000;
-  scrollbar-arrow-color:#4169E1;
-  scrollbar-base-color:#d6a92b;
-  scrollbar-dark-shadow-color:#000000;
-  scrollbar-face-color:#000000;
-  scrollbar-highlight-color:#000000;
-  scrollbar-shadow-color:#d6a92b;
-  background-color: ;
+<style type="text/css">
+ @media (max-width: 768px) {
+.container {
+flex-direction: column;
+}.sidebar {
+display: none;
+}.main-content {
+flex: 1;
 }
-a:link {
-  color: #d6a92b;
+} 
+@media (min-width: 769px) and (max-width: 1024px) {
+.container {
+flex-direction: column;
+}.sidebar {
+order: 1;
+}.main-content {
+order: 2;
 }
-a:visited {
-  color: #d6a92b;
 }
-body,td,th {
-  color: #cccccc;
+@media (min-width: 1025px) {
+.container {
+flex-direction: row;
+}.sidebar {
+display: block;
+}
 }
 </style>
 
-  <style type="text/css">
+
+
+
+<style type="text/css">
 .test{
 width: 0px;
 overflow: hidden;
@@ -91,6 +101,11 @@ margin-left: 5px;
 </style>
 
 
+
+<script type="text/javascript" src="./soundmanager2.js.download"></script>
+<script type="text/javascript" src="./inlineplayer.js.download"></script>
+
+
 </head>
 <body style="background-color: white ; color: blue ;font-size: 19px;">
 <br>
@@ -106,23 +121,16 @@ margin-left: 5px;
                   <tbody>
                     <tr>
                       <td style="width: 99%; height: 21px; border-radius: 20px;" bgcolor="#e6fdfc"> 
-<h2 class="wsite-content-title" style="text-align:center;">  Tiago -  Louvores  Mp3</h2>					  
+<h2 class="wsite-content-title" style="text-align:center;">   Louvores  Mp3</h2>					  
 
 <h3 style="text-align: center;">
 
 
-<a  title="Videos Gospel"  href="index.html"><button style="background-color:green;color:white;"><h4> 1-Video Louvores</h4></button></a>
+<a  title="Videos Gospel"  href="index2.html"><button style="background-color:green;color:white;"><h4> 1-Video Louvores</h4></button></a>
 
 <a title="Videos Nacional" href="nac2.html"><button style="background-color:pink;color:white;"><h4>2- Mpb -</h4> </button></a>
 
 <a  title="Mp3 Gospel" href="gop22.html"><button style="background-color:blue;color:white;"><h4>3 -Gospel Mp3</h4> </button></a>
-
-
-
-
-
-
-
 
 
 
