@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	
     <title>Login JS</title>
 
     <style>
@@ -55,6 +57,8 @@
             var senha = document.getElementById('senha').value;
 
             if(login == "123" && senha == "123"){
+			swal ( " Sucesso! " , " ...bom trabalho!"   )  ;
+			
                 alert('Sucesso');
                 location.href = "index.html";
             }else{
