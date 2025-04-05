@@ -39,30 +39,32 @@
 </head>
 <body>
     <body style="background-color: cyan; color: blue ;font-size: 15px;">
-
+<center>
     <form>
-
-        <h3>Login</h3>
-        <input type="text" placeholder="Login" id="login">
-        <input type="password" placeholder="Senha" id="senha">
-        <input type="submit" onclick="logar(); return false">
-
+<table border=1>
+        <tr> <td> <center>Login Music</center></td></tr>
+       <tr><td> <input type="text" placeholder="Usuario" id="login"></td></tr>
+        <tr><td><input type="password" placeholder="Senha" id="senha"></td></tr>
+       <tr><td> <input type="submit" value="Entrar" onclick="logar(); return false"></td></tr>
+</table>
     </form>
-
+</center>
 
     <script>
 
 
         function logar(){
-
+            var done=0;
             var login = document.getElementById('login').value;
             var senha = document.getElementById('senha').value;
 
-            if(login == "123" && senha == "123"){
+            if(login == "123" && senha == "123")
+			if (usuario=="giane" && senha=="31759") 
+            if (usuario=="pedro" && senha=="7742") 
+			{
 			swal ( " Sucesso! " , " ...bom trabalho!"   )  ;
-			
-               
-                location.href = "index2.html";
+                done=1;
+                window.location.href = "index2.html";
             }else{
                 alert('Usuario ou senha incorretos');
             }
