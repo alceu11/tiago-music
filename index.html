@@ -59,13 +59,22 @@
             var senha = document.getElementById('senha').value;
 
             if(login == "123" && senha == "123"){
-			  swal('Usuario ou senha corretos');
+			  swal('Sucesso');
                 done=1;
                 location.href = "index2.html";
-             
+                        }
+			if (usuario=="giane" && senha=="31759") {
+			 swal('Sucesso');
+                done=1;
+                location.href = "index2.html";
+            }
 			
-			
-            }else{
+            if (usuario=="pedro" && senha=="7742") 			{
+			 swal('Sucesso');
+                done=1;
+                location.href = "index2.html";
+			}
+			else{
                 alert('Usuario ou senha incorretos');
             }
 
