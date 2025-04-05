@@ -40,12 +40,12 @@
 <body>
     <body style="background-color: cyan; color: #ff0 ;font-size: 15px;">
 <center>
-    <form>
+    <form name=login>
 <table  style="border-radius: 20px; width: 100%; height: 23px;" cellpadding="2" cellspacing="2" bordercolor="#222" background="#e6fdfc" bgcolor="blue">
         <tr> <td> <center>Login Music</center></td></tr>
        <tr><td> <input type="text" autofocus required="required" placeholder="Usuario" id="login"></td></tr>
         <tr><td><input type="password" required="required" placeholder="Senha" id="senha"></td></tr>
-       <tr><td> <input type="submit" value="Entrar" onclick="logar(); return false"></td></tr>
+       <tr><td> <input type="submit" value="Entrar" onclick="logar()"></td></tr>
 </table>
     </form>
 </center>
@@ -55,13 +55,21 @@
 
         function logar(){
             var done=0;
-            var login = document.getElementById('login').value;
-            var senha = document.getElementById('senha').value;
+            var login = document.getElementById('login.login').value;
+            var senha = document.getElementById('login.senha').value;
 
             if(login == "123" && senha == "123"){
 			  swal('Sucesso');
                 done=1;
                 location.href = "index2.html";
+				
+		if (login=="giane" && senha=="31759") { 
+        swal('Sucesso');
+        window.location="index2.html"; done=1; }
+        if (login=="pedro" && senha=="7742") {
+          swal('Sucesso');
+         window.location="index2.html"; done=1; }
+		
             
 			}else{
                 alert('Usuario ou senha incorretos');
