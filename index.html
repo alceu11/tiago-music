@@ -58,15 +58,24 @@
             var login = document.getElementById('login').value;
             var senha = document.getElementById('senha').value;
 
-            if(login == "123" && senha == "123")    { window.location="index2.html"; done=1; }
-			if (usuario=="giane" && senha=="31759") { window.location="index2.html"; done=1; }
-            if (usuario=="pedro" && senha=="7742") { window.location="index2.html"; done=1; }
-			{
+            if(login == "123" && senha == "123"){
+			  swal('Usuario ou senha corretos');
+                done=1;
+                window.location.href = "index2.html";
+            }
+			
+			if (usuario=="giane" && senha=="31759") {
+			 
+                done=1;
+                window.location.href = "index2.html";
+            }
+			
+            if (usuario=="pedro" && senha=="7742") 			{
 			 
                 done=1;
                 window.location.href = "index2.html";
             }else{
-                swal('Usuario ou senha incorretos');
+                alert('Usuario ou senha incorretos');
             }
 
         }
