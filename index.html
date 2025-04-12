@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="BRAZiL.ICO">
 	
-	<script src='alert2.js'></script>
+	<script src='alert1.js'></script>
 	
 	
 	
@@ -61,20 +61,20 @@
             var senha = document.getElementById('senha').value;
 
             if(login == "123" && senha == "123"){
-			  swal("Logado com!", "Sucesso !!" , "success");
+			  swal.fire("Logado com!", "Sucesso !!" , "success");
                 done=1;
                 location.href = "index2.html";
 				}
 				
 	else	if (login=="giane" && senha=="31759") { 
-        swal("Logado com!", "Sucesso !!" , "success");
+        swal.fire("Logado com!", "Sucesso !!" , "success");
 		done=1;
                 location.href = "index2.html";
 		}
         
 		
     else    if (login=="pedro" && senha=="7742") {
-          swal("Logado com!", "Sucesso !!" , "success");
+          swal.fire("Logado com!", "Sucesso !!" , "success");
 		  done=1;
                 location.href = "index2.html";
 		  }
@@ -82,7 +82,7 @@
 		
             
 			else{
-			    swal("Erro a Logar !", " Senha ou Usuario Errada !!" , "error");
+			    swal.fire("Erro a Logar !", " Senha ou Usuario Errada !!" , "error");
                
             }
 
