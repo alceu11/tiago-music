@@ -6,78 +6,41 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="icon" type="image/x-icon" href="BRAZiL.ICO">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+
  <title> Gospel </title>
  
 <script language="JavaScript" src="wm_copyright.js"></script>
 
 	
+<link rel="stylesheet" type="text/css" href="./ants.css">
+<link rel="stylesheet" type="text/css" href="inlineplayer.css">
+<link rel="stylesheet" type="text/css" href="playerSlimsp.css">
+<link rel="stylesheet" type="text/css" href="flashblock.css">
+<script type="text/javascript" src="./soundmanager2.js.download"></script>
+<script type="text/javascript" src="./inlineplayer.js.download"></script>
+<script> 
+function disableselect(e){ 
+return false 
+} 
 
+function reEnable(){ 
+return true 
+} 
 
-
- 
- <script>
-  window.onload = function() {
-    // Pega todos os elementos correspondentes
-    var copyTextareaBtn = Array.prototype.slice.
-      call(document.querySelectorAll('.js-textareacopybtn'));
-    var copyTextarea = Array.prototype.slice.
-      call(document.querySelectorAll('.js-copytextarea'));
- 
-    // Laço para percorrer todos os elementos
-    copyTextareaBtn.forEach(function(btn, idx) {
- 
-      btn.addEventListener("click", function() {
- 
-        // Copia o conteudo do textarea
-        copyTextarea[idx].select();
- 
-          var msg = document.execCommand('copy') 
-            ? 'funcionou' : 'deu erro';
-          console.log('Compando para copiar texto ' + msg);
- 
-      });
- 
-    });
-  }
-</script>
-
-<script>
-    function novaJanela (URL){
-        window.open(URL,"janela1","width=800, height=600, directories=no, location=no, menubar=no,scrollbars=no, status=no, toolbar=no, resizable=no")
-    }
-</script>
-
-<script>
-    function nova1 (URL){
-        window.open(URL,"janela1","width=800, height=600, directories=no, location=no, menubar=no,scrollbars=no, status=no, toolbar=no, resizable=no")
-    }
-</script>
-
-
- 
- <script>
-function doSearch(text) {
-    if (window.find && window.getSelection) {
-        document.designMode = "on";
-        var sel = window.getSelection();
-        sel.collapse(document.body, 0);
-
-        while (window.find(text)) {
-            document.getElementById("button").blur();
-            document.execCommand("HiliteColor", false, "yellow");
-            sel.collapseToEnd();
-        }
-        document.designMode = "off";
-    } else if (document.body.createTextRange) {
-        var textRange = document.body.createTextRange();
-        while (textRange.findText(text)) {
-            textRange.execCommand("BackColor", false, "yellow");
-            textRange.collapse(false);
-        }
-    }
-}
-
-</script>
+//if IE4+ 
+document.onselectstart=new Function ("return false") 
+document.oncontextmenu=new Function ("return false") 
+//if NS6 
+if (window.sidebar){ 
+document.onmousedown=disableselect 
+document.onclick=reEnable 
+} 
+//--> 
+</script> 
 <script>
   window.onload = function() {
     // Pega todos os elementos correspondentes
@@ -103,7 +66,6 @@ function doSearch(text) {
     });
   }
 </script>
-
  
 
 
@@ -3350,7 +3312,7 @@ Portoes Celestiais
 <div class="test">
             <textarea class="js-copytextarea">[https://bia-music.top/Musicas/Hinos_e_Louvores/Paz_do_Senhor_-_Roupa_Nova_-_A_Paz_(5.09m).mp3]</textarea>
         </div>
-        <div class="test2">
+       <div class="test2">
             <button class="js-textareacopybtn">Copiar</button>
         </div>
  </li>
