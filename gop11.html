@@ -37,7 +37,31 @@ function doSearch(text) {
 }
 
 </script>
-
+<script>
+  window.onload = function() {
+    // Pega todos os elementos correspondentes
+    var copyTextareaBtn = Array.prototype.slice.
+      call(document.querySelectorAll('.js-textareacopybtn'));
+    var copyTextarea = Array.prototype.slice.
+      call(document.querySelectorAll('.js-copytextarea'));
+ 
+    // La o para percorrer todos os elementos
+    copyTextareaBtn.forEach(function(btn, idx) {
+ 
+      btn.addEventListener("click", function() {
+ 
+        // Copia o conteudo do textarea
+        copyTextarea[idx].select();
+ 
+          var msg = document.execCommand('copy') 
+            ? 'funcionou' : 'deu erro';
+          console.log('Compando para copiar texto ' + msg);
+ 
+      });
+ 
+    });
+  }
+</script>
 
  
 
@@ -3267,14 +3291,15 @@ Poder E Fe
 Portoes Celestiais  
 -><a target="_blank" href=" http://solesom.com.br//Mp3/Gospel//Rose_Nascimento_-_Portoes_Celestiais.mp3"><button> Link </button></a><br> 
 <br> 
-
+<h3 style="color:red;"> Roupa Nova  </h3>
+<a target="_blank" href="https://bia-music.top/Musicas/Hinos_e_Louvores/Paz_do_Senhor_-_Roupa_Nova_-_A_Paz_(5.09m).mp3"><h4> A pazx-Link </h4></a><br> 
 <div class="test">
             <textarea class="js-copytextarea">[https://bia-music.top/Musicas/Hinos_e_Louvores/Paz_do_Senhor_-_Roupa_Nova_-_A_Paz_(5.09m).mp3]</textarea>
         </div>
         <div class="test2">
             <button class="js-textareacopybtn">Copiar</button>
         </div>
-
+<br> 
 Ruthe Dayanne
 Chegando E Vencendo Feat Claudio Louvor  
 -><a target="_blank" href=" http://solesom.com.br//Mp3/Gospel//Ruthe_Dayanne_-_Chegando_E_Vencendo_Feat_Claudio_Louvor.mp3"><button> Link </button></a><br> 
