@@ -1,48 +1,12 @@
-<html lang="pt-br">
+<!DOCTYPE html>
+<script language="JavaScript" src="wm_copyright.js"></script>
+
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<script language="JavaScript" src="./wm_copyright.js.download"></script>
 
-
-
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="icon" type="image/x-icon" href="BRAZiL.ICO">
-
-<link rel="preconnect" href="https://h4s.googleapis.com/">
-<link rel="preconnect" href="https://h4s.gstatic.com/" crossorigin="">
-<link href="./css2(2)" rel="stylesheet"> 
-<link href="./css2(1)" rel="stylesheet">
-
-<title>Mp3 Gospe</title>
-<link rel="stylesheet" type="text/css" href="./ants.css">
-<link rel="stylesheet" type="text/css" href="inlineplayer.css">
-<link rel="stylesheet" type="text/css" href="playerSlimsp.css">
-<link rel="stylesheet" type="text/css" href="flashblock.css">
-<script type="text/javascript" src="./soundmanager2.js.download"></script>
-<script type="text/javascript" src="./inlineplayer.js.download"></script>
-<script> 
-function disableselect(e){ 
-return false 
-} 
-
-function reEnable(){ 
-return true 
-} 
-
-//if IE4+ 
-document.onselectstart=new Function ("return false") 
-document.oncontextmenu=new Function ("return false") 
-//if NS6 
-if (window.sidebar){ 
-document.onmousedown=disableselect 
-document.onclick=reEnable 
-} 
-//--> 
-</script> 
-<script>
+	<script>
   window.onload = function() {
     // Pega todos os elementos correspondentes
     var copyTextareaBtn = Array.prototype.slice.
@@ -50,7 +14,7 @@ document.onclick=reEnable
     var copyTextarea = Array.prototype.slice.
       call(document.querySelectorAll('.js-copytextarea'));
  
-    // La o para percorrer todos os elementos
+    // Laço para percorrer todos os elementos
     copyTextareaBtn.forEach(function(btn, idx) {
  
       btn.addEventListener("click", function() {
@@ -67,148 +31,99 @@ document.onclick=reEnable
     });
   }
 </script>
-  <style>
-html, body {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-body {
-  padding-top: 95px;
-}
 
-a:link {
-  color: #cococo;
-}
-a:visited {
-  color: #cococo;
-}
-body,td,th {
-  color: #cococo;
-}
-.infor {
-   margin-left: 10px;
-}
 
-#topo {           
-         position: fixed;
-         background: rgba(0,0,0,1.0);
-         top: 0px;  
-         width: 99%;
-         height: 100px; 
-         margin-left: 0px;
-         z-index: 100;             
-       }
+ <title>Mpb</title>
 
-.fixa {
-      width: 100%;
-      position: fixed;
-      z-index: 1000;
-      top: 40px;
-      left: 0;
-      right: 0;
-    }
+  
 
-#musicas {
-    text-align: left;
-    margin-left: 20px;
-    right: 20px;
-    width: 770px;
-    height: 466px; /* altura fixa para que o scroll seja ativado */
-    overflow-y: scroll; /* ativa o scroll vertical */
-    overflow-x: hidden; /* desativa o scroll horizontal */
-}
  
-::-webkit-scrollbar {
-  background:#FFFFFF;
-  width:20px; 
-  height:10px;
-}
-::-webkit-scrollbar-thumb {
-  background: #000000; 
-  box-shadow:
-}  
-::-webkit-scrollbar-corner {
-  background: #000; 
-  box-shadow:0px px 0px #ffffff;
-}
-::-webkit-scrollbar-track {
-  background:#969696;
- 
-}
-::-webkit-scrollbar-thumb:hover {
-  background:#c0c0c0;
-}
-::-webkit-scrollbar-thumb {  
-  background:#000000;
-  border-radius:20px;
-}
-::-webkit-scrollbar-button {
-  background:#CCCCCC;
-  0px 0px 0px #000000;
-
-}
- 
-.js-textareacopybtn {
-    cursor: pointer;
-    height: 25px;
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 0px; /* Alinhamento vertical, igualando   altura do bot o */
-}
-
-.js-textareacopybtn:hover {
-    color: #888;
-}
-</style>
 
 <style type="text/css">
-.lateral {border: 1px solid #cococo;
+
+
+
+<style type="text/css">
+
+.lateral {border: 1px solid #d6a92b;
 position:relative;
 width:180px;
 text-decoration:none;}
-a.menu {border: 0px solid #cococo;
+
+a.menu {border: 0px solid #d6a92b;
 position:relative;
-h4: 20px Inria Sans;
-color:#cococo;
+font: 20px Comic Sans MS;
+color:#d6a92b;
 text-decoration:none;
 display:block;
 background-color:;}
 
-a.menu:hover {h4-weight:bolder;
-color:#cococo;
+a.menu:hover {font-weight:bolder;
+color:#c9ae63;
 background-color:;
 text-decoration:none;
 }
+</style>
 
-.infor {
-   margin-left: 10px;
-}
+<script>
+  window.onload = function() {
+    // Pega todos os elementos correspondentes
+    var copyTextareaBtn = Array.prototype.slice.
+      call(document.querySelectorAll('.js-textareacopybtn'));
+    var copyTextarea = Array.prototype.slice.
+      call(document.querySelectorAll('.js-copytextarea'));
+ 
+    // Laço para percorrer todos os elementos
+    copyTextareaBtn.forEach(function(btn, idx) {
+ 
+      btn.addEventListener("click", function() {
+ 
+        // Copia o conteudo do textarea
+        copyTextarea[idx].select();
+ 
+          var msg = document.execCommand('copy') 
+            ? 'funcionou' : 'deu erro';
+          console.log('Compando para copiar texto ' + msg);
+ 
+      });
+ 
+    });
+  }
+</script>
 
+<style type="text/css">
 .test{
 width: 0px;
 overflow: hidden;
 height:20px;
-border: 1px solid #000;
+border: 1px solid ##2E64FE;
 border-radius: 3px;
 float: left;
-background: #000;
-
+background: #fff;
 }
 
 .test2{
 width: 63px;
 overflow: hidden;
-height:22px;
+height:24px;
 border: 0px solid #000;
 float: left;
 margin-left: 5px;
-
+}
+.fixa{
+	position: fixed;
+	z-index: 100;
+	top: 5px;
+	left: 12px;
 }
 </style>
+<link rel="stylesheet" type="text/css" href="./ants.css">
+<link rel="stylesheet" type="text/css" href="./inlineplayer.css">
+<link rel="stylesheet" type="text/css" href="./flashblock.css">
+<script type="text/javascript" src="./soundmanager2.js.download"></script>
+<script type="text/javascript" src="./inlineplayer.js.download"></script>
+
+
 </head>
 <body style="background-color: white; color: blue ;font-size: 13px;">
 
