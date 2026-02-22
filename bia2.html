@@ -1,48 +1,12 @@
-<html lang="pt-br">
+<!DOCTYPE html>
+<script language="JavaScript" src="wm_copyright.js"></script>
+
+<html lang="pt-br"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+<script language="JavaScript" src="./wm_copyright.js.download"></script>
 
-
-
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="icon" type="image/x-icon" href="BRAZiL.ICO">
-
-<link rel="preconnect" href="https://h4s.googleapis.com/">
-<link rel="preconnect" href="https://h4s.gstatic.com/" crossorigin="">
-<link href="./css2(2)" rel="stylesheet"> 
-<link href="./css2(1)" rel="stylesheet">
-
-<title>Mp3 Gospe</title>
-<link rel="stylesheet" type="text/css" href="./ants.css">
-<link rel="stylesheet" type="text/css" href="inlineplayer.css">
-<link rel="stylesheet" type="text/css" href="playerSlimsp.css">
-<link rel="stylesheet" type="text/css" href="flashblock.css">
-<script type="text/javascript" src="./soundmanager2.js.download"></script>
-<script type="text/javascript" src="./inlineplayer.js.download"></script>
-<script> 
-function disableselect(e){ 
-return false 
-} 
-
-function reEnable(){ 
-return true 
-} 
-
-//if IE4+ 
-document.onselectstart=new Function ("return false") 
-document.oncontextmenu=new Function ("return false") 
-//if NS6 
-if (window.sidebar){ 
-document.onmousedown=disableselect 
-document.onclick=reEnable 
-} 
-//--> 
-</script> 
-<script>
+	<script>
   window.onload = function() {
     // Pega todos os elementos correspondentes
     var copyTextareaBtn = Array.prototype.slice.
@@ -50,7 +14,7 @@ document.onclick=reEnable
     var copyTextarea = Array.prototype.slice.
       call(document.querySelectorAll('.js-copytextarea'));
  
-    // La o para percorrer todos os elementos
+    // Laço para percorrer todos os elementos
     copyTextareaBtn.forEach(function(btn, idx) {
  
       btn.addEventListener("click", function() {
@@ -67,150 +31,102 @@ document.onclick=reEnable
     });
   }
 </script>
-  <style>
-html, body {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-}
-body {
-  padding-top: 95px;
-}
 
-a:link {
-  color: #cococo;
-}
-a:visited {
-  color: #cococo;
-}
-body,td,th {
-  color: #cococo;
-}
-.infor {
-   margin-left: 10px;
-}
 
-#topo {           
-         position: fixed;
-         background: rgba(0,0,0,1.0);
-         top: 0px;  
-         width: 99%;
-         height: 100px; 
-         margin-left: 0px;
-         z-index: 100;             
-       }
+ <title>Louvor Mp</title>
 
-.fixa {
-      width: 100%;
-      position: fixed;
-      z-index: 1000;
-      top: 40px;
-      left: 0;
-      right: 0;
-    }
+  
 
-#musicas {
-    text-align: left;
-    margin-left: 20px;
-    right: 20px;
-    width: 770px;
-    height: 466px; /* altura fixa para que o scroll seja ativado */
-    overflow-y: scroll; /* ativa o scroll vertical */
-    overflow-x: hidden; /* desativa o scroll horizontal */
-}
  
-::-webkit-scrollbar {
-  background:#FFFFFF;
-  width:20px; 
-  height:10px;
-}
-::-webkit-scrollbar-thumb {
-  background: #000000; 
-  box-shadow:
-}  
-::-webkit-scrollbar-corner {
-  background: #000; 
-  box-shadow:0px px 0px #ffffff;
-}
-::-webkit-scrollbar-track {
-  background:#969696;
- 
-}
-::-webkit-scrollbar-thumb:hover {
-  background:#c0c0c0;
-}
-::-webkit-scrollbar-thumb {  
-  background:#000000;
-  border-radius:20px;
-}
-::-webkit-scrollbar-button {
-  background:#CCCCCC;
-  0px 0px 0px #000000;
-
-}
- 
-.js-textareacopybtn {
-    cursor: pointer;
-    height: 25px;
-    background-color: #333;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    line-height: 0px; /* Alinhamento vertical, igualando   altura do bot o */
-}
-
-.js-textareacopybtn:hover {
-    color: #888;
-}
-</style>
 
 <style type="text/css">
-.lateral {border: 1px solid #cococo;
+
+
+
+<style type="text/css">
+
+.lateral {border: 1px solid #d6a92b;
 position:relative;
 width:180px;
 text-decoration:none;}
-a.menu {border: 0px solid #cococo;
+
+a.menu {border: 0px solid #d6a92b;
 position:relative;
-h4: 20px Inria Sans;
-color:#cococo;
+font: 20px Comic Sans MS;
+color:#d6a92b;
 text-decoration:none;
 display:block;
 background-color:;}
 
-a.menu:hover {h4-weight:bolder;
-color:#cococo;
+a.menu:hover {font-weight:bolder;
+color:#c9ae63;
 background-color:;
 text-decoration:none;
 }
+</style>
 
-.infor {
-   margin-left: 10px;
-}
+<script>
+  window.onload = function() {
+    // Pega todos os elementos correspondentes
+    var copyTextareaBtn = Array.prototype.slice.
+      call(document.querySelectorAll('.js-textareacopybtn'));
+    var copyTextarea = Array.prototype.slice.
+      call(document.querySelectorAll('.js-copytextarea'));
+ 
+    // Laço para percorrer todos os elementos
+    copyTextareaBtn.forEach(function(btn, idx) {
+ 
+      btn.addEventListener("click", function() {
+ 
+        // Copia o conteudo do textarea
+        copyTextarea[idx].select();
+ 
+          var msg = document.execCommand('copy') 
+            ? 'funcionou' : 'deu erro';
+          console.log('Compando para copiar texto ' + msg);
+ 
+      });
+ 
+    });
+  }
+</script>
 
+<style type="text/css">
 .test{
 width: 0px;
 overflow: hidden;
 height:20px;
-border: 1px solid #000;
+border: 1px solid ##2E64FE;
 border-radius: 3px;
 float: left;
-background: #000;
-
+background: #fff;
 }
 
 .test2{
 width: 63px;
 overflow: hidden;
-height:22px;
+height:24px;
 border: 0px solid #000;
 float: left;
 margin-left: 5px;
-
+}
+.fixa{
+	position: fixed;
+	z-index: 100;
+	top: 5px;
+	left: 12px;
 }
 </style>
+<link rel="stylesheet" type="text/css" href="./ants.css">
+<link rel="stylesheet" type="text/css" href="./inlineplayer.css">
+<link rel="stylesheet" type="text/css" href="./flashblock.css">
+<script type="text/javascript" src="./soundmanager2.js.download"></script>
+<script type="text/javascript" src="./inlineplayer.js.download"></script>
+
+
 </head>
-<body style="background-color: white ; color: blue ;h4-size: 19px;">
+<body style="background-color: white; color: blue ;font-size: 13px;">
+
 
 
 <div id="topo">
@@ -305,16 +221,17 @@ margin-left: 5px;
 <p id="A"><b>A</b></p> 
 
 
-<h4><b>Deus trino</b></h4>
+<h4><b>Deus Trino</b></h4>
 
 
 <ul class="graphic">
     <li>
 
-        <a href="https://tiago-music.vercel.app/Deus-Trino.mp3" target="_blank">Deus Trino</a>&nbsp;&nbsp;
+
+        <a href="https://www.van-mell-music.com/Gospel-Religiosas/Lando_Suarez_-_Deus_Trino.mp3" target="_blank"><button> Deus Trino  </button></a>&nbsp;&nbsp;
 		
 		<div class="test">
-            <textarea class="js-copytextarea">https://tiago-music.vercel.app/Deus-Trino.mp3</textarea>
+            <textarea class="js-copytextarea">https://www.van-mell-music.com/Gospel-Religiosas/Lando_Suarez_-_Deus_Trino.mp3</textarea>
         </div>
         <div class="test2">
             <button class="js-textareacopybtn">Copiar</button>
@@ -431,6 +348,19 @@ margin-left: 5px;
 </ul><br>
 
 
+<h3><b  style="background-color:blue; color:cyan ;"> Spiritual.mp3</b></h3>
+<ul class="graphic">
+    <li>
+		<a href="https://tiago-music.vercel.app/Spiritual.mp3" target="_blank">Espiritual  </a> &nbsp;&nbsp;
+
+<div class="test">
+            <textarea class="js-copytextarea">https://tiago-music.vercel.app/Spiritual.mp3</textarea>
+        </div>
+        <div class="test2">
+            <button class="js-textareacopybtn">Copiar</button>
+        </div>
+    </li>
+</ul><br>
 
 
 
@@ -454,13 +384,310 @@ margin-left: 5px;
 </ul><br>
 
 
+<h3><b> Escudo</b></h3>
+
+<ul class="graphic">
+    <li>
+
+		<a href="http://kasadinha-midis.com.br/Music/Religiosas/Voz_Da_Verdade/O_Escudo_Km.mp3" target="_blank"> Escudo </a>&nbsp;&nbsp;
+
+<div class="test">
+            <textarea class="js-copytextarea">http://kasadinha-midis.com.br/Music/Religiosas/Voz_Da_Verdade/O_Escudo_Km.mp3 </textarea>
+        </div>
+        <div class="test2">
+            <button class="js-textareacopybtn">Copiar</button>
+        </div>
+    </li>
+</ul><br>
+
+<h3><b>Adilson- Escolhas</b></h3>
+
+
+<ul class="graphic">
+    <li>
+
+<a target="_blank"href="http://gataselvagem-music.com.br//Mp3/Gospel//Adilson_Silva_-_Escolhas.mp3">  <button>  Escolhas </button> </a>
+
+
+<div class="test">
+            <textarea class="js-copytextarea">http://gataselvagem-music.com.br//Mp3/Gospel//Adilson_Silva_-_Escolhas.mp3</textarea>
+        </div>
+        <div class="test2">
+            <button class="js-textareacopybtn">Copiar</button>
+        </div>
+    </li>
+</ul><br>
+
+
+                         
+
+<a target="_blank" href="https://youtu.be/S_jbmZ7-7lg">  <button> A Ti Meu Deus   </button></a> <br><br><br>
+   
+<b style="background-color:green;color:white;font-size:18px;">  Adilson Silva   </b>  &nbsp;
+<a target="_blank" href="https://coraçaovalente.weebly.com/uploads/1/5/0/1/150137410/adilson_silva_-_a_outra_metade_cvalente.mp3"><button> A Outra Metade  </button></a> <br>
+   
+<br><br>
+ 
+ 
+<b>  Adoracao E Vida </b>
+
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Adoracao_E_Vida_-_Simplesmente_Amar.mp3"><button>Simplesmente Amar  </button> </a> <br><br>
+    <br>
+
+<b style="background-color:green;color:white;font-size:18px;"> Adriana Arydes </b>  
+  
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Adriana_Arydes_-_Esperança_Do_Amanhecer.mp3"><button>Esperança Do Amanhecer</button> </a> <br><br>
+    <br><br>
+
+<b style="background-color:green;color:white;font-size:18px;">  Adriana Dre -  </b>
+ 
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Adriana_Dre_-_Santa_Rita.mp3"> <button>Santa Rita </button> </a> <br><br> <br><br>
+    
+
+<b style="background-color:green;color:white;font-size:18px;">  Adriana Gil  </b>  
+ 
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Adriana_Gil_-_So_Por_Ti.mp3"><button><span class="glyphicon glyphicon-play" alt="Play"></span>  So Por Ti  </button> </a> <br><br> 
+    
+
+<b style="background-color:green;color:white;font-size:18px;"> Adrianno  </b>
+
+
+
+
+
+ 
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Adrianno_-_Ele_Eh_Senhor.mp3"><button> Ele E Sr. </button> </a> 
+    
+
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Adrianno_-_Eu_Vou_Vencer.mp3"><button>Vou Vencer</button> </a>  
+    
+
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Adrianno_-_La_Vem_Jesus.mp3"><button>La Vem Jesus</button> </a> 
+    
+ 
+<a target="_blank"href="http://gataselvagem-music.com.br//Mp3/Gospel//Adrianno_-_Quero_Mais_Te_Querer.mp3"><button>kero + Te Querer</button> </a>  
+    
+ 
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Adrianno_-_Vem_Sentir_Meu_Coracao.mp3"><button>Vem Sentir Meu Coracao  </button> </a>
+ <br><br>
+    <b> Agnaldo timoteo</b> 
+  
+  <a target="_blank" href="https://youtu.be/deqt-Kmc6zA"><button>-Ave Maria</button> </a> <br><br>
+ 
+
+<b style="background-color:green;color:white;font-size:18px;">Agnus Dei- </b>
+
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Agnus_Dei_-_Podes_Reinar.mp3"><button>Podes Reinar</button> </a> <br><br>
+    
+
+<b style="background-color:green;color:white;font-size:18px;">Alda Celia -  </b>
+ 
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Alda_Celia_-_Junto_A_Ti.mp3"> <button>Junto A Ti  </button> </a> 
+    
+ 
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Alda_Celia_-_Voar_Como_A_Aguia.mp3"><button>Voar Como A Aguia </button> </a> <br><br>
+    
+
+<b style="background-color:green;color:white;font-size:18px;">Alessandra Sales  -</b>
+ 
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Alessandra_Sales_-_Grande_Graça.mp3"><button>Link-Grande Graça</button> </a> <br><br>
+    
+
+<b style="background-color:green;color:white;font-size:18px;"> Alex E Alex -</b>
+ 
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Alex_E_Alex_-_Muda_Minha_Vida.mp3">  <button> Muda Minha Vida  </button> </a> <br><br>
+    
+
+<b style="background-color:green;color:white;font-size:18px;">Alex Gonzaga</b> 
+  
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Alex_Gonzaga_-_Duas_Lagrimas.mp3"><button> Duas Lagrimas </button> </a> <br><br>
+    
+
+<b style="background-color:green;color:white;font-size:18px;">Alex e Konrado-</b>
+  
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Alex_e_Konrado_-_Que_Ele_Reine_Entre_Nos.mp3"><button>Que Ele Reine Entre Nos </button> </a> <br><br>
+    
+
+<b style="background-color:green;color:white;font-size:18px;"> Alice-</b>
+
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Alice_-_Ele_te_Escolheu.mp3">  <button>Ele te Escolheu </button> </a> 
+    
+ 
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Alice_-_So_Deus_Sabe.mp3">  <button> Link So Deus Sabe </button> </a> <br><br>
+    
+
+ <b style="background-color:green;color:white;font-size:18px;"> Aline Barros  </b> <br><br>
+ 
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Aline_Barros_-_Autor_da_Vida.mp3">  <button> Autor da Vida </button> </a> 
+    
+ 
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Aline_Barros_-_Recomecar_De_Paty_Para_Gata.mp3"><button> Recomecar </button> </a> 
+    
+ 
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Aline_Barros_-_Rendido_Estou.mp3">  <button> Rendido Estou   </button> </a> 
+    
+<a target="_blank"href=" http://gataselvagem-music.com.br//Mp3/Gospel//Aline_Barros_-_Renova_Me.mp3"><button> Link Renova Me  </button> </a> 
+    
+  
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Aline_Barros_-_Ressuscita_Me.mp3">  <button> Ressuscita Me </button> </a> 
+    
+ 
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Aline_Barros_-_Soube_que_me_Amava.mp3"><button> Soube que me Amava  </button> </a> <br><br>
+    
+
+<b style="background-color:green;color:white;font-size:18px;">Alisson E Neide - </b> 
+  
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Alisson_E_Neide_-_Mostra-Me_Tua_Gloria.mp3"><button> Mostra </button> </a> 
+    
+ 
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Alisson_E_Neide_-_Paulo_E_Silas.mp3"><button> Paulo E Silas  </button> </a> <br><br>
+    
+
+<b style="background-color:green;color:white;font-size:18px;">	Alvaro Daniel-</b> 
+
+	
+<b style="background-color:red;color:white;font-size:18px;">Amanda Wanessa - </b>
+  
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Amanda_Wanessa_-_Vai_Dar_Tudo_Certo_-_Waldecy_Aguiar.mp3"><button>Vai Dar Certo</button> </a> <br><br>
+    
+	<b style="background-color:red;color:white;font-size:18px;"> Ana Nobrega - </b> 
+
+<a target="_blank" href="https://youtu.be/-bcBo6MFxi0">  <button>Diz Creio sim-Vd </button> </a>   	<br><br> 
+
+<b style="background-color:green;color:white;font-size:18px;"> Ana Gabriela - </b>  
+  
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Ana_Gabriela_-_Eu_Vou_Gritar.mp3">  <button>Eu Vou Gritar </button> </a>  
+    
+
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Ana_Gabriela_-_Novo_Amanhecer.mp3"><button> Novo Amanhecer       </button> </a> <br><br>
+    
+<b style="background-color:green;color:white;font-size:18px;">ANDREA BOCELLI-</b>
+
+
+<b style="background-color:cyan;color:red;font-size:18px;"> Anderson Freire </b><br> 
+
+<a target="_blank"  href="https://www.nossosonhomidis.com.br/gospel/Anderson_Freire_-_Acalma_O_Meu_Coracao_jb.mp3"><button> Acalma </button></a> 
+
+
+
+<a target="_blank"  href="http://gataselvagem-music.com.br//Mp3/Gospel//Voz_Da_Verdad_-_O_Escudo.mp3"><button> Escudo </button></a>
+
+<a target="_blank"  href="https://www.nossosonhomidis.com.br/gospel/Anderson_Freire_-_Cancao_Do_Ceu_jb.mp3"><button> Cancao Ceu </button></a> 
+
+
+<a target="_blank"  href="https://www.nossosonhomidis.com.br/gospel/Anderson_Freire_-_Raridade_jb.mp3"><button> Raridade</button></a> 
+
+
+<a target="_blank" href="https://youtu.be/Hi9y53ymQO4"><button> Cora.Valente vd</button></a> 
+
+<a target="_blank" href="https://youtu.be/krvewmRvVYI"><button>PAI NOSSO-VD</button></a>  &nbsp;
+
+
+
+<a target="_blank"href="http://gataselvagem-music.com.br//Mp3/Gospel//Anderson_Freire_-_Acalma_O_Meu_Coracao.mp3"><button> Acalma O Meu Coracao</button></a> <br><br>
+    
+
+    
+
+<b style="background-color:red;color:white;font-size:18px;"> Andre Valadao   </b> <br><br>
+
+
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Andre_Valadao_-_Abraca-me.mp3"><button>Abraca</button></a> 
+
+
+
+ 
+    
+
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Andre_Valadao_-_Porque_Ele_Vive.mp3"><button>Pq Ele Vive</button></a> <br><br>
+    
+
+ <b style="background-color:green;color:white;font-size:18px;">Andrea - </b> 
+ 
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Andrea_Fontes_-_Joao_Viu.mp3"><button>   Joao Viu  </button> </a>  <br><br>
+    
+
+ <b style="background-color:green;color:white;font-size:18px;"> Angelina Pinheiro- </b>  
+  
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Angelina_Pinheiro_-_Eu_Acalmo_o_Mar.mp3">  <button> Eu Acalmo o Mar</button> </a> <br><br>
+    
+
+
+    
+
+ <b style="background-color:green;color:white;font-size:18px;"> Asaph Borba  </b> 
+  
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Asaph_Borba_-_Alto_Preco_.mp3">  <button> Alto Preco      </button> </a> <br><br>
+    
+
+ <b style="background-color:green;color:white;font-size:18px;"> Aurelina Dourado  </b> 
+
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Aurelina_Dourado_-_A_Vitoria_Chegou.mp3">  <button> -A Vitoria Chegou   </button> </a> <br><br>
+    
+<p id="B"><b>B</b></p><br><br>
+ <b style="background-color:green;color:white;" >  Banda Canal da Graca - </b> 
+
+<a target="_blank" href=" http://gataselvagem-music.com.br//Mp3/Gospel//Banda_Canal_da_Graca_-_Anjo_Guardiao.mp3">  <button> Anjo Guardiao       </button> </a> <br><br>
+    
+
+ <b style="background-color:green;color:white;font-size:18px;"> Banda Dominus /Ivete Sangalo </b><br><br> 
+ 
+ 
+ 
+ 
+    
+<a target="_blank" href="http://gataselvagem-music.com.br//Mp3/Gospel//Banda_Dominus_Padre_Fabio_e_Ivete_Sangalo_-_Nao_Estou_Sozinho.mp3"><button> N.Estou So </button> </a> <br><br>
+    
+
+
+
+
+
+
+
+<a target="_blank" href="https://www.bibliaon.com/versiculos_biblicos/"><button> Versiculos</button> </a> <br><br>
+ 
+ <b style="background-color:green;color:white;font-size:18px;">  Gifs de Louvor mp3 </b>  <br><br>
+ 
+ <a target="_blank" href="https://youtu.be/VR9xRc29sLI"><button>Silencio-vd</button></a>&nbsp; 
+ 
+ <a target="_blank" href="https://i.pinimg.com/originals/3b/e5/61/3be561e2b4280bcdaba8ecef4acf4421.gif"><button>Ceu</button></a>&nbsp; 
+ 
+ <a target="_blank" href="https://coraçaovalente.weebly.com/uploads/1/5/0/1/150137410/92d498c4663e56831545d65432e511dd_orig.gif"><button> Paz</button></a>
+ 
+ 
+ 
+ <a target="_blank" href="https://coraçaovalente.weebly.com/uploads/1/5/0/1/150137410/1b0fe1e157a7aa83946d3302963923b4_orig.gif"><button> J.te ama</button></a>
+ 
+ <a target="_blank" href="https://i.pinimg.com/564x/3a/e7/c2/3ae7c25797d63e43b484d86ef5641d9e.jpg"><button> Mar</button></a>
+ 
+ 
+ 
+ 
+ <a target="_blank" href="https://media1.tenor.com/m/Yvs4RnRJkoAAAAAC/%D1%85%D1%80%D0%B5%D1%89%D0%B5%D0%BD%D0%BD%D1%8F-baptism.gif"><button> Paz</button></a>
+ 
+ 
+ <a target="_blank" href="https://i.pinimg.com/564x/40/8b/9c/408b9c97b4e032a0a0adf038c58640b3.jpg"><button> Amem</button></a>
+ 
+ <a target="_blank" href="https://i.pinimg.com/564x/a4/59/70/a45970942076b018c550be0fe02a58ae.jpg"><button> Ceu</button></a>
+ 
+ 
+ 
+ 
+ <a target="_blank" href="https://i.pinimg.com/originals/50/8d/a3/508da3b4eafdd286b5677b122676bfd6.gif"><button> Jesus1</button></a>
+ 
+ 
+ <a target="_blank" href="https://www.preciousmemories.us/uploads/8/1/4/0/8140740/3356934.gif"><button>.jesus</button></a> <br>
+
+
+
 
 <h3><b>Aclamacao do Evangelho</b></h3>
 
 
 <ul class="graphic">
     <li>
-<a target="_blank"    href="https://bia-music.top/Musicas/Hinos_e_Louvores/Aclamacao_do_Evangelho_(Ministerio_Amor_e_Adoracao)_-_Luz_Para_O_Meu_Caminho_(m).mp3"> A.Evangelho </a>        
+<a target="_blank" href="https://bia-music.top/Musicas/Hinos_e_Louvores/Aclamacao_do_Evangelho_(Ministerio_Amor_e_Adoracao)_-_Luz_Para_O_Meu_Caminho_(m).mp3"> A.Evangelho </a>        
         <div class="test">
             <textarea class="js-copytextarea">https://bia-music.top/Musicas/Hinos_e_Louvores/Aclamacao_do_Evangelho_-_Aleluia_Jesus_Cristo_Pregava_Evangeho_(m).mp3</textarea>
         </div>
@@ -494,7 +721,7 @@ margin-left: 5px;
 </ul>
 <ul class="graphic">
     <li>
-        <a target="_blank"  href="https://bia-music.top/mp3s.php?categoria=Hinos_e_Louvores&amp;letra=Lista_Todos#" class="graphic" onclick="playerSlimsp(&#39;Musicas/Hinos_e_Louvores/Adriana_Arydes_-_Esperança_Do_Amanhecer.mp3&#39;, &#39;Adriana Arydes&#39;, &#39;Esperança Do Amanhecer&#39;, this); return false;" data-file="Musicas/Hinos_e_Louvores/Adriana_Arydes_-_Esperança_Do_Amanhecer.mp3" target="_blank" data-cantor="Adriana Arydes" data-comentario="Esperança Do Amanhecer">Esperança Do Amanhecer</a>&nbsp;&nbsp;
+        <a target="_blank"https://bia-music.top/Musicas/Hinos_e_Louvores/Adriana_Arydes_-_Esperança_Do_Amanhecer.mp3">Esperança Do Amanhecer</a>&nbsp;
         <div class="test">
             <textarea class="js-copytextarea">https://bia-music.top/Musicas/Hinos_e_Louvores/Adriana_Arydes_-_Esperança_Do_Amanhecer.mp3</textarea>
         </div>
@@ -505,7 +732,7 @@ margin-left: 5px;
 </ul>
 <ul class="graphic">
     <li>
-        <a target="_blank" href="https://bia-music.top/mp3s.php?categoria=Hinos_e_Louvores&amp;letra=Lista_Todos#" class="graphic" onclick="playerSlimsp(&#39;Musicas/Hinos_e_Louvores/Adriana_Arydes_-_Este_Pranto_Em_Minhas_Maos.mp3&#39;, &#39;Adriana Arydes&#39;, &#39;Este Pranto Em Minhas Maos&#39;, this); return false;" data-file="Musicas/Hinos_e_Louvores/Adriana_Arydes_-_Este_Pranto_Em_Minhas_Maos.mp3" data-cantor="Adriana Arydes" data-comentario="Este Pranto Em Minhas Maos">Este Pranto Em Minhas Maos</a>&nbsp;&nbsp;
+        <a target="_blank" href="https://bia-music.top/Musicas/Hinos_e_Louvores/Adriana_Arydes_-_Este_Pranto_Em_Minhas_Maos.mp3"> Pranto Em Minhas Maos</a>&nbsp;&nbsp;
         <div class="test">
             <textarea class="js-copytextarea">https://bia-music.top/Musicas/Hinos_e_Louvores/Adriana_Arydes_-_Este_Pranto_Em_Minhas_Maos.mp3</textarea>
         </div>
@@ -514,23 +741,13 @@ margin-left: 5px;
         </div>
     </li>
 </ul>
-<ul class="graphic">
-    <li>
-        <a target="_blank" href="https://bia-music.top/mp3s.php?categoria=Hinos_e_Louvores&amp;letra=Lista_Todos#" class="graphic" onclick="playerSlimsp(&#39;Musicas/Hinos_e_Louvores/Adriana_Arydes_-_Nada_E_Impossível_Para_Ti.mp3&#39;, &#39;Adriana Arydes&#39;, &#39;Nada E Impossível Para Ti&#39;, this); return false;" data-file="Musicas/Hinos_e_Louvores/Adriana_Arydes_-_Nada_E_Impossível_Para_Ti.mp3" data-cantor="Adriana Arydes" data-comentario="Nada E Impossível Para Ti">Nada E Impossível Para Ti</a>&nbsp;&nbsp;
-        <div class="test">
-            <textarea class="js-copytextarea">https://bia-music.top/Musicas/Hinos_e_Louvores/Adriana_Arydes_-_Nada_E_Impossível_Para_Ti.mp3</textarea>
-        </div>
-        <div class="test2">
-            <button class="js-textareacopybtn">Copiar</button>
-        </div>
-    </li>
-</ul>
+
 <br>
 
-<h4 face="Inria Sans,Regular" color="#CCCCCC" size="5"><b>Adriana Dre</b></h4>
+<h4 > <b> Adriana Dre </b></h4>
 <ul class="graphic">
     <li>
-        <a target="_blank" href="https://bia-music.top/mp3s.php?categoria=Hinos_e_Louvores&amp;letra=Lista_Todos#" class="graphic" onclick="playerSlimsp(&#39;Musicas/Hinos_e_Louvores/Adriana_Dre_-_Santa_Rita.mp3&#39;, &#39;Adriana Dre&#39;, &#39;Santa Rita&#39;, this); return false;" data-file="Musicas/Hinos_e_Louvores/Adriana_Dre_-_Santa_Rita.mp3" data-cantor="Adriana Dre" data-comentario="Santa Rita">Santa Rita</a>&nbsp;&nbsp;
+        <a target="_blank" href="https://bia-music.top/Musicas/Hinos_e_Louvores/Adriana_Dre_-_Santa_Rita.mp3">Santa Rita</a>&nbsp;&nbsp;
         <div class="test">
             <textarea class="js-copytextarea">https://bia-music.top/Musicas/Hinos_e_Louvores/Adriana_Dre_-_Santa_Rita.mp3</textarea>
         </div>
@@ -541,10 +758,10 @@ margin-left: 5px;
 </ul><br>
 
 
-<h4 face="Inria Sans,Regular" color="#CCCCCC" size="5"><b>Advento</b></h4>
+<h3> <b> Advento </b></h3>
 <ul class="graphic">
     <li>
-        <a href="https://bia-music.top/mp3s.php?categoria=Hinos_e_Louvores&amp;letra=Lista_Todos#" class="graphic" onclick="playerSlimsp(&#39;Musicas/Hinos_e_Louvores/Advento_-_Comunidade_Catolica_Shalom_-_Eis_Que_Vem.mp3&#39;, &#39;Advento&#39;, &#39;Comunidade Catolica Shalom - Eis Que Vem&#39;, this); return false;" data-file="Musicas/Hinos_e_Louvores/Advento_-_Comunidade_Catolica_Shalom_-_Eis_Que_Vem.mp3" data-cantor="Advento" data-comentario="Comunidade Catolica Shalom - Eis Que Vem">Comunidade Catolica Shalom - Eis Que Vem</a>&nbsp;&nbsp;
+        <a target="_blank" href="https://bia-music.top/Musicas/Hinos_e_Louvores/Advento_-_Comunidade_Catolica_Shalom_-_Eis_Que_Vem.mp3"> Eis Que Vem</a>&nbsp;&nbsp;
         <div class="test">
             <textarea class="js-copytextarea">https://bia-music.top/Musicas/Hinos_e_Louvores/Advento_-_Comunidade_Catolica_Shalom_-_Eis_Que_Vem.mp3</textarea>
         </div>
@@ -555,7 +772,7 @@ margin-left: 5px;
 </ul>
 <ul class="graphic">
     <li>
-        <a href="https://bia-music.top/mp3s.php?categoria=Hinos_e_Louvores&amp;letra=Lista_Todos#" class="graphic" onclick="playerSlimsp(&#39;Musicas/Hinos_e_Louvores/Advento_-_Mensageiros_da_Paz_-_Eterna_Alianca_(Canto_De_Comunhao).mp3&#39;, &#39;Advento&#39;, &#39;Mensageiros da Paz - Eterna Alianca (Canto De Comunhao)&#39;, this); return false;" data-file="Musicas/Hinos_e_Louvores/Advento_-_Mensageiros_da_Paz_-_Eterna_Alianca_(Canto_De_Comunhao).mp3" data-cantor="Advento" data-comentario="Mensageiros da Paz - Eterna Alianca (Canto De Comunhao)">Mensageiros da Paz - Eterna Alianca (Canto De Comunhao)</a>&nbsp;&nbsp;
+        <a target="_blank" href="https://bia-music.top/Musicas/Hinos_e_Louvores/Advento_-_Mensageiros_da_Paz_-_Eterna_Alianca_(Canto_De_Comunhao).mp3">Mensageiros da Paz -</a>&nbsp;&nbsp;
         <div class="test">
             <textarea class="js-copytextarea">https://bia-music.top/Musicas/Hinos_e_Louvores/Advento_-_Mensageiros_da_Paz_-_Eterna_Alianca_(Canto_De_Comunhao).mp3</textarea>
         </div>
@@ -13964,7 +14181,61 @@ margin-left: 5px;
             <button class="js-textareacopybtn">Copiar</button>
         </div>
     </li>
-</ul><br><h4 face="Inria Sans,Regular" color="#CCCCCC" size="5"><b>Virginia Arruda</b></h4>
+</ul><br>
+ <h3> Vikink  </h3> 
+      
+       <a target="_blank" href="https://youtu.be/kE_fDW4eV3Q"><button>Adorarei</button></a> 
+      
+      <a target="_blank" href="https://youtu.be/7vwzxYLhb3Q"><button>Bondade</button></a>
+      
+       <a target="_blank" href="https://youtu.be/_0F2xdf37MM"><button> O Escudo</button></a>
+      
+      
+<a target="_blank" href="https://youtu.be/hlAQdhZYJQo"><button> Louve </button></a>      
+      
+<a target="_blank" href="https://youtu.be/9fXODSJj7Wk"><button>O mover d.Espirito</button></a>     
+      
+ <a target="_blank" href="https://youtu.be/q-F7MCW7aNg"><button>Na Alegria</button></a> 
+      
+      <a target="_blank" href="https://youtu.be/XbveNhE7TLY"><button>Só kero adorar</button></a>
+      
+      <a target="_blank" href="https://youtu.be/zuvh-4b22Fo"><button>Vitorioso</button></a> 
+      
+       <a target="_blank" href="https://youtu.be/njC7EJw7Z6g"><button>91 </button></a>
+      
+    <a target="_blank" href="https://youtu.be/IeE_xq8xGSM"><button>Noites </button></a>
+      
+    <a target="_blank" href="https://youtu.be/kR7qeDMBrUs"><button>Ousado </button></a>
+      
+      
+    <a target="_blank" href="https://youtu.be/h-tGJQm-qeM"><button>Qd td</button></a>  
+      
+      
+    <a target="_blank" href="https://youtu.be/rNC8kNrYehQ"><button>Sto</button></a> 
+      
+    <a target="_blank" href="https://youtu.be/BLnV4QdeetA"><button>S/as ondas</button></a>   
+      
+    <a target="_blank" href="https://youtu.be/zbX-f4QGrWU"><button>N/general</button></a> 
+      
+    <a target="_blank" href="https://youtu.be/jLN3V5d4P9w"><button>O gde</button></a>
+      
+      
+      <a target="_blank" href="https://youtu.be/XwN6Abc8Y6w"><button>A ele Gloria</button></a>
+      
+      
+       <a target="_blank" href="https://youtu.be/9ZS_sJRjCTo"><button>Sossegai</button></a>
+      
+      
+       <a target="_blank" href="https://youtu.be/w9E-eZD0RHo"><button>com Cristo</button></a>
+      
+      
+      <a target="_blank" href="https://youtu.be/znCJXjyO5Lo"><button>Msg Cristo</button></a>
+      
+      
+      
+      <br><br>
+ 
+<h4 face="Inria Sans,Regular" color="#CCCCCC" size="5"><b>Virginia Arruda</b></h4>
 <ul class="graphic">
     <li>
         <a href="https://bia-music.top/mp3s.php?categoria=Hinos_e_Louvores&amp;letra=Lista_Todos#" class="graphic" onclick="playerSlimsp(&#39;Musicas/Hinos_e_Louvores/Virginia_Arruda_-_Tempo_De_Colheita.mp3&#39;, &#39;Virginia Arruda&#39;, &#39;Tempo De Colheita&#39;, this); return false;" data-file="Musicas/Hinos_e_Louvores/Virginia_Arruda_-_Tempo_De_Colheita.mp3" data-cantor="Virginia Arruda" data-comentario="Tempo De Colheita">Tempo De Colheita</a>&nbsp;&nbsp;
