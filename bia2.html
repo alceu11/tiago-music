@@ -6,6 +6,18 @@
 
 <script language="JavaScript" src="./wm_copyright.js.download"></script>
 
+  <script>
+            function playAudio() {
+                let x = document.getElementById("myAudio");
+                x.play();
+            }
+            function pauseAudio() {
+                let x = document.getElementById("myAudio");
+                x.pause();
+            }       
+        </script>
+
+
 	<script>
   window.onload = function() {
     // Pega todos os elementos correspondentes
@@ -243,6 +255,13 @@ margin-left: 5px;
 
 <ul class="graphic">
     <li>
+               <audio id="myAudio" controls>
+
+
+                <source src="https://tiago-music.vercel.app/Angelus.mp3" type="audio/mpeg">
+                            </audio>
+
+                <button onclick="playAudio()">Play</button>
 
 		<a href="https://tiago-music.vercel.app/Angelus.mp3" target="_blank">Angelus.mp3</a>&nbsp;&nbsp;
 
