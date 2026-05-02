@@ -22,51 +22,6 @@
 <link rel="stylesheet" type="text/css" href="flashblock.css">
 <script type="text/javascript" src="./soundmanager2.js.download"></script>
 <script type="text/javascript" src="./inlineplayer.js.download"></script>
-<script> 
-function disableselect(e){ 
-return false 
-} 
-
-function reEnable(){ 
-return true 
-} 
-
-//if IE4+ 
-document.onselectstart=new Function ("return false") 
-document.oncontextmenu=new Function ("return false") 
-//if NS6 
-if (window.sidebar){ 
-document.onmousedown=disableselect 
-document.onclick=reEnable 
-} 
-//--> 
-</script> 
-<script>
-  window.onload = function() {
-    // Pega todos os elementos correspondentes
-    var copyTextareaBtn = Array.prototype.slice.
-      call(document.querySelectorAll('.js-textareacopybtn'));
-    var copyTextarea = Array.prototype.slice.
-      call(document.querySelectorAll('.js-copytextarea'));
- 
-    // La o para percorrer todos os elementos
-    copyTextareaBtn.forEach(function(btn, idx) {
- 
-      btn.addEventListener("click", function() {
- 
-        // Copia o conteudo do textarea
-        copyTextarea[idx].select();
- 
-          var msg = document.execCommand('copy') 
-            ? 'funcionou' : 'deu erro';
-          console.log('Compando para copiar texto ' + msg);
- 
-      });
- 
-    });
-  }
-</script>
- 
 
 
  <style>
@@ -221,18 +176,10 @@ margin-left: 5px;
 <br>
 
 
-<div align="center"> 
-  <div class="artista">
-<p>
-
-  </div>
-</div>
-
-<br><br>
-<p id="#"></p><br><br>
+<p> <p id="#"></p>
 <br>
-<div id="sm2-container"></div>
-	 <h3 style="text-align: center;"> Gospel-mp3- </h3>
+
+	 
 	 
 	 <input type="text" id="search">
 <input type="button" id="button" onmousedown="doSearch(document.getElementById('search').value)" value="Buscar">
@@ -249,7 +196,7 @@ margin-left: 5px;
 <a target="_blank" href="https://www.bibliaon.com/versiculos_biblicos/"><button> Versiculos</button> </a> <br><br>
 
 
-<a target="_blank" href="https://www.van-mell-music.com/Gospel-Religiosas/Lando_Suarez_-_Deus_Trino.mp3"><button> Deus.Trino </button> </a> 
+
 
 
 
@@ -257,24 +204,20 @@ margin-left: 5px;
  
 <a target="_blank" href="https://bia-music.top/Musicas/Hinos_e_Louvores/Musica_Legionaria_-_Anjo_Da_Guarda_Divino_Ser.mp3"> <button>Anjo guarda </button> </a> 
 
-<a target="_blank" href="https://www.van-mell-music.com/Gospel-Religiosas/Padre_Marcelo_Rossi_-_Pai_Nosso.mp3">pai nosso</a> <br>
+
 
 <br>
- 
+ <a target="_blank" href="https://bia-music.top/Musicas/Hinos_e_Louvores/Viking_Nordico_-_Raridade.mp3"> <button> Raridade V </button>  </a><br> 
 
-A Ponte-><a target="_blank" href=" http://solesom.com.br//Mp3/Gospel//A_Ponte_-_Vai_Valer_A_Pena.mp3""><button> Link </button></a><br> 
+  <a target="_blank" href=" http://solesom.com.br//Mp3/Gospel//A_Ponte_-_Vai_Valer_A_Pena.mp3""><button> A Ponte-></button></a><br> 
 <br> 
 
-<h2>Abel Porto</h2>
-Lagrimas De Uma Mae-><a target="_blank"  href="http://solesom.com.br//Mp3/Gospel//Abel_Porto_-_Lagrimas_De_Uma_Mae.mp3"><button> Link </button></a><br> 
-<br> 
-
-<h2>Adaelson Guimaraes-</h2>
-Quem Sou -><a target="_blank" href=" http://solesom.com.br//Mp3/Gospel//Adaelson_Guimaraes_-_Quem_Sou.mp3"><button> Link </button></a><br> 
+<h2>Adaelson Guimaraes</h2>
+     <a  href=" http://solesom.com.br//Mp3/Gospel//Adaelson_Guimaraes_-_Quem_Sou.mp3"><button> Quem Sou -</button></a>
 <br> 
 
 <h2>	 Adriana Arydes-</h2>	
-A Chave Do Coracao -><a target="_blank" href=" http://solesom.com.br//Mp3/Gospel//Adriana_Arydes_-_A_Chave_Do_Coracao.mp3"><button> Link </button></a><br> 
+<a target="_blank" href=" http://solesom.com.br//Mp3/Gospel//Adriana_Arydes_-_A_Chave_Do_Coracao.mp3"><button> A Chave Do Coracao  </button></a><br> 
 <br> 
 Lindo Ceu  
 -><a target="_blank" href=" http://solesom.com.br//Mp3/Gospel//Adriana_Arydes_-_Lindo_Ceu.mp3"><button> Link </button></a><br> 
@@ -300,8 +243,8 @@ Voar Como A Aguia
 <br> 
 
 <h2> Aldaleia Carnevalli </h2>
-Amor Maior Faet Daniel Abreu  
--><a target="_blank" href=" http://solesom.com.br//Mp3/Gospel//Aldaleia_Carnevalli_-_Amor_Maior_Faet_Daniel_Abreu.mp3"><button> Link </button></a><br> 
+Amor Maior Faet Daniel Abreu ->
+<a target="_blank" href=" http://solesom.com.br//Mp3/Gospel//Aldaleia_Carnevalli_-_Amor_Maior_Faet_Daniel_Abreu.mp3"><button> Link </button></a><br> 
 <br> 
 Manda Chamar Davi Faet Daniel Abreu  
 -><a target="_blank" href=" http://solesom.com.br//Mp3/Gospel//Aldaleia_Carnevalli_-_Manda_Chamar_Davi_Faet_Daniel_Abreu.mp3"><button> Link </button></a><br> 
