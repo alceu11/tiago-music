@@ -10,11 +10,11 @@
 <head>
 
 
-
+<script>
 			var tocar = function(url){
   $("#audioPlayer").attr('src',url);   
 }
-
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <audio id="audioPlayer" controls autoplay></audio>
 
@@ -251,10 +251,6 @@ margin-left: 5px;
 <br>				
                </div>
                        
- <button onclick="tocar('https://tiago-music.vercel.app/Anjo-Guarda.mp3');">Horse.mp3</button>
-<button onclick="tocar('https://tiago-music.vercel.app/Anjo-Guarda.mp3');">anjo.mp3</button>
-<button onclick="tocar('https://tiago-music.vercel.app/Pai.mp3');">Pai. espirita.ogg</button>
-<button onclick="tocar('https://upload.wikimedia.org/wikipedia/en/4/45/ACDC_-_Back_In_Black-sample.ogg');">ACDC.ogg</button>
 
 
 	  
@@ -275,13 +271,15 @@ margin-left: 5px;
 		
 <h3><bstyle="background-color: blue; color:#ff0 ;"> Gospel- MP3- Deus Trino </b></h3>
 
+ <button onclick="tocar('https://tiago-music.vercel.app/Anjo-Guarda.mp3');">Horse.mp3</button>
+<button onclick="tocar('https://tiago-music.vercel.app/Anjo-Guarda.mp3');">anjo.mp3</button>
+<button onclick="tocar('https://tiago-music.vercel.app/Pai.mp3');">Pai. espirita.ogg</button>
+
+
 
 <ul class="graphic">
     <li>
-	 <button onclick="tocar('https://tiago-music.vercel.app/Anjo-Guarda.mp3');">Horse.mp3</button>
-<button onclick="tocar('https://tiago-music.vercel.app/Anjo-Guarda.mp3');">anjo.mp3</button>
-<button onclick="tocar('https://tiago-music.vercel.app/Pai.mp3');">Pai. espirita.ogg</button>
-<button onclick="tocar('https://upload.wikimedia.org/wikipedia/en/4/45/ACDC_-_Back_In_Black-sample.ogg');">ACDC.ogg</button>
+
 
 	
     <a href="https://bia-music.top/Musicas/Hinos_e_Louvores/Deus_Trino_-_Monsenhor_Jonas_Abib_-_Deus_Trino_(2.16m).mp3" target="_blank"> Deus Trino  </a>&nbsp;&nbsp;
@@ -6393,7 +6391,11 @@ margin-left: 5px;
     </li>
 </ul><br><br><br></div>
 
-<script src="./playerSlimsp.js.download"></script>
+<script src="./playerSlimsp.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<audio id="audioPlayer" controls autoplay></audio>
+
 
 </body>
 </html>
