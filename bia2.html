@@ -234,11 +234,18 @@ margin-left: 5px;
 <div id="info"></div>
     </div></div>      
 
-				
-				
+				var tocar = function(url){
+  $("#audioPlayer").attr('src',url);   
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<audio id="audioPlayer" controls autoplay></audio>
+<br>				
                </div>
                        
- 
+ <button onclick="tocar('http://www.w3schools.com/tags/horse.mp3');">Horse.mp3</button>
+<button onclick="tocar('https://tiago-music.vercel.app/Anjo-Guarda.mp3');">anjo.mp3</button>
+<button onclick="tocar('https://tiago-music.vercel.app/Pai.mp3');">Pai. espirita.ogg</button>
+<button onclick="tocar('https://upload.wikimedia.org/wikipedia/en/4/45/ACDC_-_Back_In_Black-sample.ogg');">ACDC.ogg</button>
 
 
 	  
