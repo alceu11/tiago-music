@@ -2,14 +2,23 @@
 
 
 <html lang="pt-br">
-<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
 
 <html lang="pt-br">
-<head>
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+
+
+<script>
+			var tocar = function(url){
+  $("#audioPlayer").attr('src',url);   
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 
 
 
@@ -247,7 +256,19 @@ margin-left: 5px;
                     </tr>
                   </tbody>
                 </table>
+					<div id="topo">
+<div id="tocador" style="text-align:  center;">
+    <audio id="audioPlayer" controls autoplay></audio>
+    </div>
+<div id="info"></div>
+    </div></div>      
+
+	
+		
                </div>
+            
+				
+         <br>		      
                        
  
 
@@ -336,9 +357,14 @@ margin-left: 5px;
 		</ul>
 		
 		<h3>Afonso arinos </h3>
+		
+		
 		<a target="_blank" href="https://tiago-music.vercel.app/Amor-deb.mp3 "> <button>Amor-Bionce </button>  </a> &nbsp;&nbsp;
+		
+			<button onclick="tocar('https://tiago-music.vercel.app/Amor-deb.mp3 ');">Amor tocar</button>
+		
      <a target="_blank" href="https://tiago-music.vercel.app/Talvez_Seja_Amor-Tiago.mp3"> <button> Talvez amor </button>  </a> &nbsp;&nbsp;
-
+    <button onclick="tocar('https://tiago-music.vercel.app/Talvez_Seja_Amor-Tiago.mp3 ');">Talvez s/Amor tocar</button>
 		<br>
 		
 		<div id="sm2-container"></div>
