@@ -18,19 +18,33 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 
+<script>
+function copiarLink() {
+    // 1. Seleciona o campo de texto
+    const inputLink = document.getElementById("meuLink");
+    
+    // 2. Copia o conteúdo para a área de transferência (Clipboard)
+    navigator.clipboard.writeText(inputLink.value).then(() => {
+        
+        // 3. Mostra a mensagem de confirmação
+        const alerta = document.getElementById("alerta");
+        alerta.style.display = "inline";
+        
+        // 4. Esconde a mensagem após 2 segundos
+        setTimeout(() => {
+            alerta.style.display = "none";
+        }, 2000);
+        
+    }).catch(err => {
+        console.error("Erro ao copiar: ", err);
+    });
+}
+</script>
 
 
 
-  <script>
-            function playAudio() {
-                let x = document.getElementById("myAudio");
-                x.play();
-            }
-            function pauseAudio() {
-                let x = document.getElementById("myAudio");
-                x.pause();
-            }       
-        </script>
+
+  
 
 
 	<script>
@@ -272,7 +286,19 @@ margin-left: 5px;
         </div>
 		<br>
 		<a target="_blank" href="https://dl.dropboxusercontent.com/scl/fi/38m5eaxvexdw4j7gsacti/Deus_Trino.mp3?rlkey=lc8ygnjoomlfo2d3svetzxyev&st=dta5zubg&dl=0"> Deus Trino  </a>&nbsp;&nbsp;
-    </li>
+    
+	<!-- O link que será copiado -->
+<input type="text" value="https://dl.dropboxusercontent.com/scl/fi/38m5eaxvexdw4j7gsacti/Deus_Trino.mp3?rlkey=lc8ygnjoomlfo2d3svetzxyev&st=dta5zubg&dl=0" id="meuLink" readonly>
+
+<!-- O botão que dispara a ação -->
+<button onclick="copiarLink()">Copiar Link</button>
+
+<!-- Mensagem de confirmação que começa escondida -->
+<span id="alerta" style="display: none; color: green; margin-left: 10px;">
+    ¡Link copiado com sucesso!
+</span>
+
+	</li>
 </ul><br>
 
 
