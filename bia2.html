@@ -18,6 +18,28 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 
+<script>
+function copiarLink() {
+    // 1. Seleciona o campo de texto
+    const inputLink = document.getElementById("meuLink");
+    
+    // 2. Copia o conteúdo para a área de transferência (Clipboard)
+    navigator.clipboard.writeText(inputLink.value).then(() => {
+        
+        // 3. Mostra a mensagem de confirmação
+        const alerta = document.getElementById("alerta");
+        alerta.style.display = "inline";
+        
+        // 4. Esconde a mensagem após 2 segundos
+        setTimeout(() => {
+            alerta.style.display = "none";
+        }, 2000);
+        
+    }).catch(err => {
+        console.error("Erro ao copiar: ", err);
+    });
+}
+</script>
 
 
 
@@ -271,26 +293,33 @@ margin-left: 5px;
 <!-- O botão que dispara a ação -->
 <button onclick="copiarLink()">Copiar Link</button>
 
+<!-- Mensagem de confirmação que começa escondida -->
+<span id="alerta" style="display: none; color: green; margin-left: 10px;">
+    ¡Link copiado com sucesso!
+</span>
 
 	</li>
 </ul><br>
 
 
 <h3><b>Anjo-Guarda.mp3</b></h3>
-
-
+<ul class="graphic">
+    <li>
 		<a href="https://tiago-music.vercel.app/Anjo-Guarda.mp3" target="_blank"><button style="background-color:blue; color:white ;"> Anjo guarda  </button></a> &nbsp;&nbsp;
+
+<div class="test">
+            <textarea class="js-copytextarea">https://tiago-music.vercel.app/Anjo-Guarda.mp3</textarea>
+        </div>
+        <div class="test2">
+            <button class="js-textareacopybtn">Copiar</button>
+        </div>
+		<button onclick="tocar('https://tiago-music.vercel.app/Anjo-Guarda.mp3');">Anjo.toca</button>
+    </li>
 	
-	<input   type="hidden"   value="https://tiago-music.vercel.app/Anjo-Guarda.mp3" id="meuLink" readonly>
-<button onclick="copiarLink()">Copiar Link</button>
-
-<span id="alerta" style="display: none; color: green; margin-left: 10px;">
-    ¡Link copiado com sucesso!
-</span>
-
-
-
-	<br>
+	
+	
+	
+	</ul><br>
 	<li>
 		<a href="https://tiago-music.vercel.app/anjo-luz.mp3" target="_blank"><button> Anjo GUARDA </button> </a> &nbsp;&nbsp;
 
@@ -6405,30 +6434,6 @@ margin-left: 5px;
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <audio id="audioPlayer" controls autoplay></audio>
-
-<script>
-function copiarLink() {
-    // 1. Seleciona o campo de texto
-    const inputLink = document.getElementById("meuLink");
-    
-    // 2. Copia o conteúdo para a área de transferência (Clipboard)
-    navigator.clipboard.writeText(inputLink.value).then(() => {
-        
-        // 3. Mostra a mensagem de confirmação
-        const alerta = document.getElementById("alerta");
-        alerta.style.display = "inline";
-        
-        // 4. Esconde a mensagem após 2 segundos
-        setTimeout(() => {
-            alerta.style.display = "none";
-        }, 2000);
-        
-    }).catch(err => {
-        console.error("Erro ao copiar: ", err);
-    });
-}
-</script>
-
 
 
 </body>
