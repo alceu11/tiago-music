@@ -306,16 +306,16 @@ margin-left: 5px;
 <ul class="graphic">
     <li>
 		<a href="https://tiago-music.vercel.app/Anjo-Guarda.mp3" target="_blank"><button style="background-color:blue; color:white ;"> Anjo guarda  </button></a> &nbsp;&nbsp;
-
-<div class="test">
-            <textarea class="js-copytextarea">https://tiago-music.vercel.app/Anjo-Guarda.mp3</textarea>
-        </div>
-        <div class="test2">
-            <button class="js-textareacopybtn">Copiar</button>
-        </div>
-		<button onclick="tocar('https://tiago-music.vercel.app/Anjo-Guarda.mp3');">Anjo.toca</button>
-    </li>
 	
+	<input   type="hidden"  size="1" value="https://tiago-music.vercel.app/Anjo-Guarda.mp3" id="meuLink" readonly>
+<button onclick="copiarLink()">Copiar Link</button>
+
+<span id="alerta" style="display: none; color: green; margin-left: 10px;">
+    ¡Link copiado com sucesso!
+</span>
+
+	    </li>
+	</ul>
 	<br>
 	<li>
 		<a href="https://tiago-music.vercel.app/anjo-luz.mp3" target="_blank"><button> Anjo GUARDA </button> </a> &nbsp;&nbsp;
