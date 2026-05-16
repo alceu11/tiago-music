@@ -42,11 +42,6 @@ function copiarLink() {
 </script>
 
 
-
-
-  
-
-
 	<script>
   window.onload = function() {
     // Pega todos os elementos correspondentes
@@ -273,8 +268,6 @@ margin-left: 5px;
 
 <ul class="graphic">
     <li>
-
-
 	
     <a href="https://bia-music.top/Musicas/Hinos_e_Louvores/Deus_Trino_-_Monsenhor_Jonas_Abib_-_Deus_Trino_(2.16m).mp3" target="_blank"> Deus Trino  </a>&nbsp;&nbsp;
 		
@@ -286,9 +279,9 @@ margin-left: 5px;
         </div>
 		<br>
 		<a target="_blank" href="https://dl.dropboxusercontent.com/scl/fi/38m5eaxvexdw4j7gsacti/Deus_Trino.mp3?rlkey=lc8ygnjoomlfo2d3svetzxyev&st=dta5zubg&dl=0"> Deus Trino  </a>&nbsp;&nbsp;
-    
-	<!-- O link que será copiado     type="text"-->
-<input   type="hidden"  size="1" value="https://dl.dropboxusercontent.com/scl/fi/38m5eaxvexdw4j7gsacti/Deus_Trino.mp3?rlkey=lc8ygnjoomlfo2d3svetzxyev&st=dta5zubg&dl=0" id="meuLink" readonly>
+    <br>
+	<!-- O link que será copiado     type="hidden"-->
+    <input   type="text"  size="1" value="https://dl.dropboxusercontent.com/scl/fi/38m5eaxvexdw4j7gsacti/Deus_Trino.mp3?rlkey=lc8ygnjoomlfo2d3svetzxyev&st=dta5zubg&dl=0" id="meuLink" readonly>
 
 <!-- O botão que dispara a ação -->
 <button onclick="copiarLink()">Copiar Link</button>
@@ -318,6 +311,18 @@ margin-left: 5px;
 
         </div>
 		<button onclick="tocar('https://tiago-music.vercel.app/Anjo-Guarda.mp3');">Anjo.toca</button>
+		
+		    <br>
+	<!-- O link que será copiado     type="hidden"-->
+    <input   type="text"  size="1" value="https://tiago-music.vercel.app/Anjo-Guarda.mp3'" id="meuLink" readonly>
+
+<!-- O botão que dispara a ação -->
+<button onclick="copiarLink()">Copiar Link</button>
+
+<!-- Mensagem de confirmação que começa escondida -->
+<span id="alerta" style="display: none; color: green; margin-left: 10px;">
+    ¡Link copiado com sucesso!
+</span>
     </li>
 	
 	
