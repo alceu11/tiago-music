@@ -9,6 +9,23 @@
  
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
 
+<script>
+function copiar() {
+
+  let nome = document.getElementById('Nome').innerText;
+
+  navigator.clipboard.writeText(nome)
+    .then(
+      function() {
+        console.log(" Os dados foram copiados.")
+      },
+      function() {
+        console.error("Houve um problema ao copiar os dados.")
+      });
+}
+
+</script>
+
 
 <script>
 			var tocar = function(url){
@@ -281,15 +298,13 @@ margin-left: 5px;
 		<a target="_blank" href="https://dl.dropboxusercontent.com/scl/fi/38m5eaxvexdw4j7gsacti/Deus_Trino.mp3?rlkey=lc8ygnjoomlfo2d3svetzxyev&st=dta5zubg&dl=0"> Deus Trino  </a>&nbsp;&nbsp;
     <br>
 	<!-- O link que será copiado     type="hidden"-->
-    <input   type="text"  size="1" value="https://dl.dropboxusercontent.com/scl/fi/38m5eaxvexdw4j7gsacti/Deus_Trino.mp3?rlkey=lc8ygnjoomlfo2d3svetzxyev&st=dta5zubg&dl=0" id="meuLink" readonly>
+    <input   type="text"  size="1" value="https://dl.dropboxusercontent.com/scl/fi/38m5eaxvexdw4j7gsacti/Deus_Trino.mp3?rlkey=lc8ygnjoomlfo2d3svetzxyev&st=dta5zubg&dl=0" id="nome" readonly>
 
-<!-- O botão que dispara a ação -->
-<button onclick="copiarLink()">Copiar Link</button>
 
-<!-- Mensagem de confirmação que começa escondida -->
-<span id="alerta" style="display: none; color: green; margin-left: 10px;">
-    ¡Link copiado com sucesso!
-</span>
+<input type="button" onclick="copiar()" value="Copiar">
+
+
+
 
 	</li>
 </ul><br>
