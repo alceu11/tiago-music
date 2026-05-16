@@ -9,54 +9,7 @@
  
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
 
-<script>
-function copiar() {
 
-  let nome = document.getElementById('Nome').innerText;
-
-  navigator.clipboard.writeText(nome)
-    .then(
-      function() {
-        console.log(" Os dados foram copiados.")
-      },
-      function() {
-        console.error("Houve um problema ao copiar os dados.")
-      });
-}
-
-</script>
-
-
-<script>
-			var tocar = function(url){
-  $("#audioPlayer").attr('src',url);   
-}
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
-
-<script>
-function copiarLink() {
-    // 1. Seleciona o campo de texto
-    const inputLink = document.getElementById("meuLink");
-    
-    // 2. Copia o conteúdo para a área de transferência (Clipboard)
-    navigator.clipboard.writeText(inputLink.value).then(() => {
-        
-        // 3. Mostra a mensagem de confirmação
-        const alerta = document.getElementById("alerta");
-        alerta.style.display = "inline";
-        
-        // 4. Esconde a mensagem após 2 segundos
-        setTimeout(() => {
-            alerta.style.display = "none";
-        }, 2000);
-        
-    }).catch(err => {
-        console.error("Erro ao copiar: ", err);
-    });
-}
-</script>
 
 
 	<script>
@@ -296,14 +249,9 @@ margin-left: 5px;
         </div>
 		<br>
 		<a target="_blank" href="https://dl.dropboxusercontent.com/scl/fi/38m5eaxvexdw4j7gsacti/Deus_Trino.mp3?rlkey=lc8ygnjoomlfo2d3svetzxyev&st=dta5zubg&dl=0"> Deus Trino  </a>&nbsp;&nbsp;
-    <br>
-	<!-- O link que será copiado     type="hidden"-->
-    <input   type="text"  size="1" value="https://dl.dropboxusercontent.com/scl/fi/38m5eaxvexdw4j7gsacti/Deus_Trino.mp3?rlkey=lc8ygnjoomlfo2d3svetzxyev&st=dta5zubg&dl=0" id="nome" readonly>
-
-
-<input type="button" onclick="copiar()" value="Copiar">
-
-
+    
+	
+    
 
 
 	</li>
@@ -328,13 +276,8 @@ margin-left: 5px;
 		<button onclick="tocar('https://tiago-music.vercel.app/Anjo-Guarda.mp3');">Anjo.toca</button>
 		
 		    <br>
-	<!-- O link que será copiado     type="hidden"-->
-    <input   type="text"  size="1" value="https://tiago-music.vercel.app/Anjo-Guarda.mp3'" id="nome" readonly>
-
-<!-- O botão que dispara a ação -->
-<input type="button" onclick="copiar()" value="Copiar G">
-
-
+	
+    
     </li>
 	
 	
