@@ -49,7 +49,7 @@
 </script>
 
 
- <title>Mpb</title>
+ <title>Mpbs</title>
 
  
 
@@ -57,63 +57,12 @@
 
 
 
-<script>
-  window.onload = function() {
-    // Pega todos os elementos correspondentes
-    var copyTextareaBtn = Array.prototype.slice.
-      call(document.querySelectorAll('.js-textareacopybtn'));
-    var copyTextarea = Array.prototype.slice.
-      call(document.querySelectorAll('.js-copytextarea'));
- 
-    // Laço para percorrer todos os elementos
-    copyTextareaBtn.forEach(function(btn, idx) {
- 
-      btn.addEventListener("click", function() {
- 
-        // Copia o conteudo do textarea
-        copyTextareaidx.select();
- 
-          var msg = document.execCommand('copy') 
-            ? 'funcionou' : 'deu erro';
-          console.log('Compando para copiar texto ' + msg);
- 
-      });
- 
-    });
-  }
-</script>
 
-<style type="text/css">
-.test{
-width: 0px;
-overflow: hidden;
-height:20px;
-border: 1px solid ##2E64FE;
-border-radius: 3px;
-float: left;
-background: #fff;
-}
-
-.test2{
-width: 63px;
-overflow: hidden;
-height:24px;
-border: 0px solid #000;
-float: left;
-margin-left: 5px;
-}
-.fixa{
-	position: fixed;
-	z-index: 100;
-	top: 5px;
-	left: 12px;
-}
-</style>
 
 
 
 </head>
-<body style="background-color: #000000 ; color: white ;font-size: 15px;">
+<body style="background-color: white   ; color:  #000000   ;font-size: 15px;">
 <br>
 
  
