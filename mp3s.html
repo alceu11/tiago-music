@@ -1,6 +1,11 @@
 <!DOCTYPE html>
+
+
 <html lang="pt-br">
 <head>
+
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,9 +22,139 @@
 
 <title> Mpb</title>
 
+	<script>
+  window.onload = function() {
+    // Pega todos os elementos correspondentes
+    var copyTextareaBtn = Array.prototype.slice.
+      call(document.querySelectorAll('.js-textareacopybtn'));
+    var copyTextarea = Array.prototype.slice.
+      call(document.querySelectorAll('.js-copytextarea'));
+ 
+    // Laço para percorrer todos os elementos
+    copyTextareaBtn.forEach(function(btn, idx) {
+ 
+      btn.addEventListener("click", function() {
+ 
+        // Copia o conteudo do textarea
+        copyTextareaidx.select();
+ 
+          var msg = document.execCommand('copy') 
+            ? 'funcionou' : 'deu erro';
+          console.log('Compando para copiar texto ' + msg);
+ 
+      });
+ 
+    });
+  }
+</script>
+
+
+ <title>Mpb</title>
+
+  <style>
+BODY{
+  scrollbar-3d-light-color:#000000;
+  scrollbar-arrow-color:#4169E1;
+  scrollbar-base-color:#d6a92b;
+  scrollbar-dark-shadow-color:#000000;
+  scrollbar-face-color:#000000;
+  scrollbar-highlight-color:#000000;
+  scrollbar-shadow-color:#d6a92b;
+  background-color: ;
+}
+a:link {
+  color: #d6a92b;
+}
+a:visited {
+  color: #d6a92b;
+}
+body,td,th {
+  color: #cccccc;
+}
+</style>
+
+ <style>
+::-webkit-scrollbar {
+  background:#cccccc;
+  width:10px; 
+  height:10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffffff; 
+  box-shadow:0px 0px 11px #ff0000;
+}
+::-webkit-scrollbar-corner {
+  background: #000; 
+  box-shadow:0px px 10px #CCCCCC;
+}
+::-webkit-scrollbar-track {
+  background:#000;
+ 
+}
+</style>
+
+<style type="text/css">
+
+
+
+<style type="text/css">
+
+.lateral {border: 1px solid #d6a92b;
+position:relative;
+width:180px;
+text-decoration:none;}
+
+a.menu {border: 0px solid #d6a92b;
+position:relative;
+font: 20px Comic Sans MS;
+color:#d6a92b;
+text-decoration:none;
+display:block;
+background-color:;}
+
+a.menu:hover {font-weight:bolder;
+color:#c9ae63;
+background-color:;
+text-decoration:none;
+}
+</style>
+
+
+
+<style type="text/css">
+.test{
+width: 0px;
+overflow: hidden;
+height:20px;
+border: 1px solid ##2E64FE;
+border-radius: 3px;
+float: left;
+background: #fff;
+}
+
+.test2{
+width: 63px;
+overflow: hidden;
+height:24px;
+border: 0px solid #000;
+float: left;
+margin-left: 5px;
+}
+.fixa{
+	position: fixed;
+	z-index: 100;
+	top: 5px;
+	left: 12px;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="./ants.css">
+<link rel="stylesheet" type="text/css" href="./inlineplayer.css">
+<link rel="stylesheet" type="text/css" href="./flashblock.css">
+<script type="text/javascript" src="./soundmanager2.js.download"></script>
+<script type="text/javascript" src="./inlineplayer.js.download"></script>
 
 </head>
-<body style="background-color: white   ; color:  #000000   ;font-size: 16px;">
+<body style="background-color: #000000 ; color: white ;font-size: 15px;">
 <br>
 
  
@@ -111,20 +246,29 @@
  
 
 
+  <div class="infor"> 
+    <div align="center"><font   color="000000" size="4"><b></b></font></div>
+  </div>
 
+<br>
+<div class="music"></div>
 
 <p id="">#</p>
 <p id="A">A</p>
 
+<div align="center"> 
+  <div class="artista">
+<p>
+    </p><div class="music"> </div>
+  </div>
+</div>
+<div class="music">&nbsp;<font color="##2E64FE">Nacional</font></div></div>
 
 
+<h3 style="text-align:center;background-color:orange;color:blue;"></h3>  
 
-
-
- <h3 style="text-align: center;background-color:blue; color:white;"><b>Relequias da MPB</b></h3>  
-
-
-
+ <h3 style="text-align: center;background-color:#2b00fe; color:#fcff01;"><b>Relequias da MPB</b></h3>  
+<div style="text-align: left;color: red;font-size: 1.2rem;bold;">
 <div style="text-align: left;"> 
 <a target="_blank" href="https://youtu.be/BYZlYzb9Ja4" ><button style="background-color:cyan;">Aloqut-Vd</button></a> &nbsp; 
 
@@ -158,18 +302,38 @@
 
 
 
+<div>
+
+        <div>&nbsp;</div>
 
 
-        
-
-
-
-	<h3>14 Bis</h3>
+<div id="sm2-container"></div><br><font color="red" size="4"><b>14 Bis</b></font>
+		<ul class="graphic">
+			<li>
+  
 <a target="_blank" href="https://gataselvagem-music.com.br/Mp3/Nacionais//14_Bis_-_Todo_O_Azul_Do_Mar.mp3"  class="sm2_link">Tod.Azul Mar</a>&nbsp; 
  
-		<br>
-<a  href="https://gataselvagem-music.com.br/Mp3/Nacionais//6L6_-_Declaracao.mp3" target="_blank" > 6L6-Declaracao</a>&nbsp;&nbsp;
-	
+				<div class="test">
+					<textarea class="js-copytextarea">http://gataselvagem-music.com.br//Mp3/Nacionais//14_Bis_-_Todo_O_Azul_Do_Mar.mp3</textarea>
+				</div>
+				<div class="test2">
+					<button class="js-textareacopybtn">Copiar</button>
+    			</div>
+			</li>
+		</ul>
+		
+		<div id="sm2-container"></div><br><font color="white" size="4"><b>6L6</b></font>
+		<ul class="graphic">
+			<li>
+				<a  href="https://gataselvagem-music.com.br/Mp3/Nacionais//6L6_-_Declaracao.mp3" target="_blank" class="sm2_link">Declaracao</a>&nbsp;&nbsp;
+				<div class="test">
+					<textarea class="js-copytextarea">http://gataselvagem-music.com.br//Mp3/Nacionais//6L6_-_Declaracao.mp3</textarea>
+				</div>
+				<div class="test2">
+					<button class="js-textareacopybtn">Copiar</button>
+    			</div>
+			</li>
+		</ul>
 		
 		<h3>Afonso arinos </h3>
 		
@@ -182,14 +346,29 @@
     <button onclick="tocar('https://tiago-music.vercel.app/Talvez_Seja_Amor-Tiago.mp3 ');">Talvez s/Amor tocar</button>
 		<br>
 		
-		<h3>6L6 </h3>
-
-
+		<div id="sm2-container"></div>
+		<ul class="graphic">
+			<li>
 				<a target="_blank" href="https://gataselvagem-music.com.br/Mp3/Nacionais//6L6_-_Eu_Me_Lembro.mp3" style="left=20px;" class="sm2_link">Eu Me Lembro</a>&nbsp;&nbsp;
-
+				<div class="test">
+					<textarea class="js-copytextarea">http://gataselvagem-music.com.br//Mp3/Nacionais//6L6_-_Eu_Me_Lembro.mp3</textarea>
+				</div>
+				<div class="test2">
+					<button class="js-textareacopybtn">Copiar</button>
+    			</div>
+			</li>
+		</ul><div id="sm2-container"></div>
+		<ul class="graphic">
+			<li>
 				<a target="_blank" href="https://gataselvagem-music.com.br/Mp3/Nacionais//6L6_-_So_Voce.mp3" style="left=20px;" class="sm2_link">So Voce</a>&nbsp;&nbsp;
-
-<div id="sm2-container"></div>
+				<div class="test">
+					<textarea class="js-copytextarea">http://gataselvagem-music.com.br//Mp3/Nacionais//6L6_-_So_Voce.mp3</textarea>
+				</div>
+				<div class="test2">
+					<button class="js-textareacopybtn">Copiar</button>
+    			</div>
+			</li>
+		</ul><div id="sm2-container"></div>
 		<ul class="graphic">
 			<li>
 				<a target="_blank" href="https://gataselvagem-music.com.br/Mp3/Nacionais//6L6_-_Vem_%20Pra_Mim.mp3" style="left=20px;" class="sm2_link">Vem  Pra Mim</a>&nbsp;&nbsp;
