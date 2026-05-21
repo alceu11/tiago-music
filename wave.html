@@ -5,14 +5,22 @@
 
 <head>
 
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link rel="icon" type="image/x-icon" href="BRAZiL.ICO">
 
-<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+
+<script>
+			var tocar = function(url){
+  $("#audioPlayer").attr('src',url);   
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 
 
 
@@ -96,7 +104,7 @@ margin-left: 5px;
                   <tbody>
                     <tr>
                       <td style="width: 99%; height: 21px; border-radius: 20px;" bgcolor="#e6fdfc"> 
-<h3 class="wsite-content-title" style="text-align:center;">Tiago  Musica- Wave </h3>					  
+<h3 class="wsite-content-title" style="text-align:center;">  Musica- Wave </h3>					  
 
 <h4 style="text-align: center;">
 
@@ -171,7 +179,19 @@ margin-left: 5px;
                     </tr>
                   </tbody>
                 </table>
+				
+					<div id="topo">
+<div id="tocador" style="text-align:  center;">
+    <audio id="audioPlayer" controls autoplay></audio>
+    </div>
+<div id="info"></div>
+    </div></div>      
+
+	
+		
                </div>
+            
+              <br>
                        
  
 
@@ -265,8 +285,9 @@ margin-left: 5px;
       <h3  style="text-align:center;"><span style="background-color:green; color:white;"> Alan Walker </span>  </h3><br /> <br /> 
 
  
+ <a target="_blank" href="http://solesom.com.br/Mp3/Dance/Alan_Walker_-_Diamond_Heart_Ft_Sophia_Somajo.mp3"> <button>Somejo  </button>  </a> &nbsp;&nbsp;
  
- 
+ <button onclick="tocar('http://solesom.com.br/Mp3/Dance/Alan_Walker_-_Diamond_Heart_Ft_Sophia_Somajo.mp3');"> tc…<i class="material-icons">undo</i>-</button>
  <a href="https://tiago-music.vercel.app/alan-w-spectre.mp3" target="_blank"><button>**Spectre-Alan W</button> </a>
  
 <a href="https://youtu.be/_BFgzaqyd8w" target="_blank"><button>**Endles Summer</button> </a>
