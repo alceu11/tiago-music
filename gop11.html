@@ -11,18 +11,22 @@
 <link rel="preconnect" href="https://fonts.googleapis.com/">
 <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
 
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
+
+<script>
+			var tocar = function(url){
+  $("#audioPlayer").attr('src',url);   
+}
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+
+
  <title> Gospel </title>
  
-<script language="JavaScript" src="wm_copyright.js"></script>
+
 
 	
-<link rel="stylesheet" type="text/css" href="./ants.css">
-<link rel="stylesheet" type="text/css" href="inlineplayer.css">
-<link rel="stylesheet" type="text/css" href="playerSlimsp.css">
-<link rel="stylesheet" type="text/css" href="flashblock.css">
-<script type="text/javascript" src="./soundmanager2.js.download"></script>
-<script type="text/javascript" src="./inlineplayer.js.download"></script>
-
 
  <style>
 <style type="text/css">
@@ -164,6 +168,13 @@ margin-left: 5px;
                     </tr>
                   </tbody>
                 </table>
+				<div id="topo">
+<div id="tocador" style="text-align:  center;">
+    <audio id="audioPlayer" controls autoplay></audio>
+    </div>
+<div id="info"></div>
+    </div></div>      
+
                </div>
                        
  
@@ -216,6 +227,8 @@ margin-left: 5px;
 <legend> Adaelson Guimaraes  </legend>
  
    <a target="_blank"  href=" http://solesom.com.br//Mp3/Gospel//Adaelson_Guimaraes_-_Quem_Sou.mp3"><button> Quem Sou -</button></a>
+   <button onclick="tocar('http://solesom.com.br//Mp3/Gospel//Adaelson_Guimaraes_-_Quem_Sou..mp3');">🎧?-</button>
+   
 <br> 
 
 
@@ -224,9 +237,10 @@ margin-left: 5px;
 
 
 
-
+<button onclick="tocar('http://solesom.com.br//Mp3/Gospel//Adriana_Arydes_-_A_Chave_Do_Coracao.mp3');">🎧?-</button>
 <a target="_blank" href=" http://solesom.com.br//Mp3/Gospel//Adriana_Arydes_-_A_Chave_Do_Coracao.mp3"><button> A Chave Do Coracao  </button></a><br> 
 <br> 
+  
   
  <a target="_blank" href=" http://solesom.com.br//Mp3/Gospel//Adriana_Arydes_-_Lindo_Ceu.mp3"><button> Lindo Ceu </button></a><br> 
 <br> 
