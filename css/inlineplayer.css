@@ -1,0 +1,328 @@
+body {
+  width: 98%;
+  margin-top: 110px;
+  overflow-y: scroll;
+  align-items: center;
+  justify-content: center;
+}
+
+  .style16 {
+    color: #ffffff
+  }
+
+  .style17 {
+    color: #000000
+  }
+
+  #estilo {
+    margin-left: 2%;
+  }
+
+  #home {
+    margin-left: 4%;
+  }
+
+  #menu {
+    margin-left: 6%;
+  }
+  .fixa img {
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .fixa img:hover {
+    transform: scale(1.2); /* Amplia o tamanho da letra em 50% */
+  }
+
+#tocador {
+  width: 85%;
+  text-align: center;
+  display: inline;
+  margin-top: 0px;
+  padding: 0px;
+  justify-content: center; 
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+.player_wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Largura desejada do player */
+  height: 40px;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+
+.video_player {
+  display: none; /* Esconde o elemento de  udio padr o */
+}
+
+.player_controls {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+  padding: 0px;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+#play_button {
+  width: 16px; /* Largura do bot o de reprodu  o */
+  height: 16px; /* Altura do bot o de reprodu  o */
+  margin-left: 15%;
+}
+
+#cuTimer, 
+#slashTimer,
+#toTimer {
+  font-size: 14px; /* Tamanho da fonte do temporizador */
+  display: inline;
+  margin-left: 2px; /* Espa amento reduzido */
+  color: #ffffff !important; /* Cor dos marcadores de tempo */
+}
+
+/* Adiciona um background para garantir a visibilidade */
+#div_timer {
+  background-color: rgba(0, 0, 0, 0.8); /* Cor de fundo com opacidade */
+  padding: 2px 5px; /* Espa amento interno */
+  border-radius: 3px; /* Bordas arredondadas */
+}
+
+
+
+#progress-bar {
+  width: calc(50% - 100px); /* Largura da barra de progresso */
+  height: 15px; /* Altura da barra de progresso */
+  margin-left: 10px;
+}
+
+#pbar-move {
+  height: 100%; /* Altura da parte preenchida da barra de progresso */
+  background-color: #8c1e1c; /* Cor da parte preenchida da barra de progresso */
+}
+
+#div_vol {
+  display: flex;
+  align-items: center;
+  margin-right: 15%; /* Margem direita */
+}
+
+#change_vol {
+  width: 50px; /* Largura do controle de volume */
+  margin-right: 5px; /* Margem direita */
+}
+
+#vol_img {
+  width: 16px; /* Largura da imagem de volume */
+  height: 16px; /* Altura da imagem de volume */  
+  margin-left: 15px; /* Margem esquerda */
+}
+
+#info {
+  width: 100%; /* Calcula a largura da div info */
+  margin-top: 0px; /* Margem superior */
+  font-size: 16px; /* Tamanho da fonte */
+  padding: 0px;
+  animation: pulse 1s infinite; /* Aplica  o da anima  o de pulsa  o */
+  display: inline-block;
+  justify-content: center; 
+}
+
+#musicas {
+    margin-left: 40px;
+    margin-right: 25px;
+    padding: 2px;
+    background-color: #000;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+ul.slimsp {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.slimsp li {
+    display: flex;
+    align-items: center;
+    padding: 1px;   
+}
+
+.artista-separador {
+    border-top: 1px solid #ccc;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.artista {
+  color:  #c9a169; /* Cor do texto do artista */
+  font-size: 22px; /* Tamanho da fonte do texto do artista */
+  font-weight: bold; /* Deixa o texto em negrito */
+  margin-top: 20px;
+}
+
+@keyframes pulse {
+    0% {
+        color: #fff;
+    }
+    50% {
+        color: #a67329; /* Cor intermedi ria */
+    }
+    100% {
+        color: #fff;
+    }
+}
+
+ul.slimsp li.selected {
+    background-color: #222; /* Cor de destaque para a m sica sendo reproduzida */
+}
+
+ul.slimsp li.selected a {
+    color: #fff; /* Cor inicial */
+    animation: pulse 1s infinite; /* Aplica  o da anima  o de pulsa  o */
+    text-decoration: none; /* Remove sublinhado do link */
+}
+.mp3_tocador {
+   margin-left: 20px;
+   animation: pulse 1s infinite; /* Aplica  o da anima  o de pulsa  o */
+}
+
+ul.slimsp li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ccc; /* ← aqui muda cor  da musica! */
+
+    flex-grow: 1;
+font-size: 20px; /* ← aqui você manda tamanho da fonte da musica */
+}
+    padding-right:10px;
+}
+  
+ul.slimsp li a:hover {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+ul.slimsp li.visited {
+    opacity: 0.5; /* Opacidade reduzida para m sicas visitadas */
+    pointer-events: none; /* Desativa eventos de mouse para m sicas visitadas */
+}
+
+ul.slimsp li a .sm2_icon {
+    width: 18px;
+    height: 18px;
+    background-size: contain;
+    margin-right: 20px; /* Padding de 20px entre o  cone e o nome da m sica */
+    margin-left: 20px;
+}
+
+ul.slimsp li a.sm2_playing .sm2_icon {
+    background: url('Image/icon_pause.png') no-repeat center;
+}
+
+ul.slimsp li a:not(.sm2_playing) .sm2_icon {
+    background: url('Image/icon_play.png') no-repeat center;
+}
+
+ul.slimsp li .music-info {
+    flex-grow: 1;
+}
+
+ul.slimsp li button.add-to-playlist-btn, 
+ul.slimsp li .test2 button {
+    margin-left: 10px;
+    background-color: #4d423c;
+    border: none;
+    color: white;
+    padding: 5px 2px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+ul.slimsp li button.add-to-playlist-btn:hover, 
+ul.slimsp li .test2 button:hover {
+    background-color: #4d423c;
+}
+
+.add-to-playlist-btn {
+  background-color: ; /* Ajuste conforme necess rio */
+  border: none;
+  color: #4d423c;
+  width: 18px; /* Aumentei a largura para acomodar o sinal de adi  o */
+  height: 18px; /* Aumentei a altura para acomodar o sinal de adi  o */
+  cursor: pointer;
+  margin-left: 15px;
+  margin-right: 20px;
+  outline: none; 
+  margin-bottom: 1px; /* Corrigi a ortografia */
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.test {
+    display: none; /* Esconde a textarea at  ser necess rio */
+}
+
+  .balao-informativo {
+    position: absolute;
+    background-color: #a67329;\*quando esta copiado*/
+    color: black;
+    font-size: 10px;
+    padding: 2px 10px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    animation: fadeInOut 2s ease-out forwards;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+ul.slimsp li button.js-textareacopybtn {
+  width: 40px; /* Largura desejada do player */
+  height: 18px;
+  font-size: 10px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 3px;
+  cursor: pointer;
+}
+
+ul.slimsp li button.js-textareacopybtn:hover {
+  background-color: #785224;
+}
+
+.track-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.track {
+  flex: 1;
+}
+
+
+
+
