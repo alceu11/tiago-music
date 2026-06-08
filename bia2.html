@@ -11,12 +11,12 @@
 
 <script>
 			var tocar = function(url){
-  $("#audioPlayer").attr('src',url);   
+  $("#video_player").attr('src',url);   
 }
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-
+<!-- video_player   audioPlayer -->
 
 
 	<script>
@@ -173,13 +173,23 @@ margin-left: 5px;
                    <a  class='btn btn-link' href="mp3s.html">    ...... 	</a>
 
     </h3>
-				<div id="topo">
-<div id="tocador" style="text-align:  center;">
-    <audio id="audioPlayer" controls autoplay></audio>
-    </div>
-<div id="info"></div>
-    </div>
-	
+			
+<div id="tocador" style="text-align: center; padding-top: 10px;">
+            <audio id="video_player"><source id="sorce" src="" type="audio/mp3"></audio>
+            <div class="player_wrapper">
+                <div class="player_controls">
+                    <input type="image" src="Image/play.png" id="play_button" onclick="controleGeral()">
+                    <div id="div_timer"><span id="cuTimer">00:00</span> / <span id="toTimer">00:00</span></div>
+                    <progress id="progress-bar" max="100" value="0"></progress>
+                    <div id="div_vol">
+                        <img src="Image/volume.png" id="vol_img">
+                        <input type="range" id="change_vol" step="0.05" min="0" max="1" value="0.50">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+*************
 
 	  </div>
       <a  href="#"><b><h2 size="3"></h2></b></a>&nbsp; &nbsp;  <h3 size="3"><b>
@@ -6226,3 +6236,14 @@ margin-left: 5px;
 
 </body>
 </html>
+
+<!----
+	<div id="topo">
+<div id="tocador" style="text-align:  center;">
+    <audio id="audioPlayer" controls autoplay></audio>
+    </div>
+<div id="info"></div>
+    </div>
+	
+*************
+--->
