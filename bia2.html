@@ -115,6 +115,17 @@ float: left;
 background: #fff;
 }
 
+ .btn-copiar { 
+        background: #333; 
+        color: #fff; 
+        border: 1px solid #c9ae63; 
+        padding: 2px 6px; 
+        font-size: 10px; 
+        cursor: pointer; 
+        border-radius: 3px;
+    }
+
+
 .test2{
 width: 63px;
 overflow: hidden;
@@ -282,6 +293,7 @@ margin-left: 5px;
 <ul class="graphic">
     <li>
 	
+	 <button class="btn-copiar" onclick="copiarLink(this, 'https://tiago-music.vercel.app/Anjo-Guarda.mp3')">Copie Anj.gda</button>
 	 <button onclick="tocar('https://tiago-music.vercel.app/Anjo-Guarda.mp3');"> ->🎧-</button>
 		<a href="https://tiago-music.vercel.app/Anjo-Guarda.mp3" target="_blank"><button style="background-color:blue; color:white ;"> Anjo guarda  </button></a> &nbsp;&nbsp;
 
@@ -5916,6 +5928,8 @@ margin-left: 5px;
         <div class="test2">
             <button class="js-textareacopybtn">Copiar</button>
         </div>
+		        <button class="btn-copiar" onclick="copiarLink(this, 'https://bia-music.top/Musicas/Hinos_e_Louvores/William_Hoziel_-_Basta_Confiar_Em_Deus.mp3')">Copiar</button>
+		
     </li>
 </ul><br><br><br></div>
 
@@ -5924,6 +5938,21 @@ margin-left: 5px;
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <audio id="audioPlayer" controls autoplay></audio>
 
+<script>
+function copiarLink(botao, texto) {
+    navigator.clipboard.writeText(texto).then(function() {
+        var balao = document.createElement('div');
+        balao.className = 'notificacao';
+        balao.innerHTML = 'Copiado';
+        document.body.appendChild(balao);
+        
+        var rect = botao.getBoundingClientRect();
+        balao.style.left = (rect.left) + 'px';
+        balao.style.top = (rect.top + window.scrollY - 15) + 'px';
+        
+        setTimeout(function() { balao.remove(); }, 800);
+    });
+</script>
 
 </body>
 </html>
