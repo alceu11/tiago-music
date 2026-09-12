@@ -1,162 +1,96 @@
 <!DOCTYPE html>
-
-
 <html lang="pt-br">
 <head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="css/inlineplayer.css">
 
-
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons"  rel="stylesheet">
-
-<script>
+  <script>
 			var tocar = function(url){
   $("#audioPlayer").attr('src',url);   
 }
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+ 
 
 
+ <script src="./soundmanager2.js"></script>
 
-<title> Mpb</title>
-
-	<script>
-  window.onload = function() {
-    // Pega todos os elementos correspondentes
-    var copyTextareaBtn = Array.prototype.slice.
-      call(document.querySelectorAll('.js-textareacopybtn'));
-    var copyTextarea = Array.prototype.slice.
-      call(document.querySelectorAll('.js-copytextarea'));
- 
-    // Laço para percorrer todos os elementos
-    copyTextareaBtn.forEach(function(btn, idx) {
- 
-      btn.addEventListener("click", function() {
- 
-        // Copia o conteudo do textarea
-        copyTextareaidx.select();
- 
-          var msg = document.execCommand('copy') 
-            ? 'funcionou' : 'deu erro';
-          console.log('Compando para copiar texto ' + msg);
- 
-      });
- 
-    });
-  }
-</script>
-
-
- <title>Mpb</title>
 
   <style>
-BODY{
-  scrollbar-3d-light-color:#000000;
-  scrollbar-arrow-color:#4169E1;
-  scrollbar-base-color:#d6a92b;
-  scrollbar-dark-shadow-color:#000000;
-  scrollbar-face-color:#000000;
-  scrollbar-highlight-color:#000000;
-  scrollbar-shadow-color:#d6a92b;
-  background-color: ;
-}
-a:link {
-  color: #d6a92b;
-}
-a:visited {
-  color: #d6a92b;
-}
-body,td,th {
-  color: #cccccc;
-}
-</style>
+    BODY { background-color: #000; color: #9a9da1; font-family: Times New Roman; margin: 0; padding: 0; }
+    
+    .cabecalho-fixo { 
+        position: -webkit-sticky; 
+        position: sticky; 
+        top: 0; 
+        z-index: 9000; 
+        background: #000; 
+        border-bottom: 2px solid #c9ae63;
+        padding-bottom: 10px;
+    }
+    
+    .artista-separador { background: #111; padding: 5px; color: #c9ae63; font-weight: bold; margin-top: 10px; font-size: 22px; }
+    
+    .slimsp { 
+        list-style: none; 
+        padding: 8px 15px; 
+        border-bottom: 1px solid #222; 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+    }
+    
+    .musica-item { display: flex; align-items: center; cursor: pointer; color: #fff; text-decoration: none; font-size: 20px; flex-grow: 1; }
+    
+    /* SELO New PULSANDO EM VERMELHO */
+    .selo-new { 
+        color: #FF0000; 
+        font-weight: bold; 
+        font-size: 14px; 
+        margin-left: 8px; 
+        animation: pulsarNew 0.8s infinite alternate; 
+        display: inline-block; 
+    }
+    @keyframes pulsarNew { 
+        from { opacity: 1; transform: scale(1); } 
+        to { opacity: 0.2; transform: scale(1.1); } 
+    }
 
- <style>
-::-webkit-scrollbar {
-  background:#cccccc;
-  width:10px; 
-  height:10px;
-}
-::-webkit-scrollbar-thumb {
-  background: #ffffff; 
-  box-shadow:0px 0px 11px #ff0000;
-}
-::-webkit-scrollbar-corner {
-  background: #000; 
-  box-shadow:0px px 10px #CCCCCC;
-}
-::-webkit-scrollbar-track {
-  background:#000;
- 
-}
-</style>
+    .img-play-lista { width: 22px; height: 22px; margin-right: 10px; }
 
-<style type="text/css">
+    .btn-copiar { 
+        background: #333; 
+        color: #fff; 
+        border: 1px solid #c9ae63; 
+        padding: 2px 6px; 
+        font-size: 10px; 
+        cursor: pointer; 
+        border-radius: 3px;
+    }
 
-
-
-<style type="text/css">
-
-.lateral {border: 1px solid #d6a92b;
-position:relative;
-width:180px;
-text-decoration:none;}
-
-a.menu {border: 0px solid #d6a92b;
-position:relative;
-font: 20px Comic Sans MS;
-color:#d6a92b;
-text-decoration:none;
-display:block;
-background-color:;}
-
-a.menu:hover {font-weight:bolder;
-color:#c9ae63;
-background-color:;
-text-decoration:none;
-}
-</style>
-
-
-
-<style type="text/css">
-.test{
-width: 0px;
-overflow: hidden;
-height:20px;
-border: 1px solid ##2E64FE;
-border-radius: 3px;
-float: left;
-background: #fff;
-}
-
-.test2{
-width: 63px;
-overflow: hidden;
-height:24px;
-border: 0px solid #000;
-float: left;
-margin-left: 5px;
-}
-.fixa{
-	position: fixed;
-	z-index: 100;
-	top: 5px;
-	left: 12px;
-}
-</style>
-<link rel="stylesheet" type="text/css" href="./ants.css">
-<link rel="stylesheet" type="text/css" href="./inlineplayer.css">
-<link rel="stylesheet" type="text/css" href="./flashblock.css">
-<script type="text/javascript" src="./soundmanager2.js.download"></script>
-<script type="text/javascript" src="./inlineplayer.js.download"></script>
-
+    .notificacao {
+        position: fixed;
+        background: #c9ae63;
+        color: #000;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-size: 11px;
+        font-weight: bold;
+        z-index: 10000;
+        pointer-events: none;
+        animation: sobe 0.8s ease-out forwards;
+    }
+    @keyframes sobe { 
+        from { opacity: 1; transform: translateY(0); } 
+        to { opacity: 0; transform: translateY(-25px); } 
+    }
+  </style>
 </head>
-<body style="background-color: #000000 ; color: white ;font-size: 15px;">
-<br>
-<header id="topo">
+<body  style="background-color: blue; color: #000000 ;">
+ 
+
+<div class="cabecalho-fixo" style="background-color: blue; color: #000000 ;">
+    <header id="topo">
         <div id="tocador" style="text-align: center; padding-top: 10px;">
             <audio id="video_player"><source id="sorce" src="" type="audio/mp3"></audio>
          <div class="player_wrapper">
@@ -172,20 +106,12 @@ margin-left: 5px;
         <div align="center" id="info" style="color:#4945ba; font-weight:bold; padding:5px; font-size: 12px; min-height: 15px;"></div>
     </header>
 
- 
-
-<div align="center">
-  <div></div>
-  <div class="fixa" align="center">
- <table style="border-radius: 20px; width: 100%; height: 23px;" cellpadding="2" cellspacing="2" bordercolor="#222" background="#e6fdfc" bgcolor="blue">
-                  <tbody>
-                    <tr>
-                      <td style="width: 99%; height: 21px; border-radius: 20px;" bgcolor="#e6fdfc"> 
-
-<h4 style="text-align: center;">
-<a title="Gospel video" href="index2.html">  <button style="background-color:#199319;color:white;"><h5>Louva</h5> </button></a>
-
-
+    <div align="center">
+	   
+        <table border="2" cellspacing="2" bordercolor="#222" background="#e6fdfc" bgcolor="cyan">
+            <tbody><td>
+			<a title=" Voltar" class="btn btn-link" href="index2.html" >   <button >Voltar</button> </a>  
+			<a tagert="_blank" class="btn btn-link" href="https://www.ulme.chat/" >   <button >Ulme</button> </a>
 <a title="Video Mpb"  href="nac2.html"><button style="background-color:cyan;color:#000;"><h5>Mpb </h5> </button></a>
 
 <a title="Video Italia"  href="ita2.html"><button style="background-color:green;color:white;"><h5>Italia</h5> </button></a>
@@ -201,72 +127,52 @@ margin-left: 5px;
 <a  title=" Instrumental"  href="int22.html"><button style="background-color:orange;color: #000;"><h5> Clasic</h5> </button></a>
 
 <a   title="Wave "  href="wave.html"><button style="background-color:pink;color:#000;"><h4> Wav </h4></button></a>
-
-<a href="https://www.slim-sp.site/videos/menuVideos.html" target="_blank"><button style="background-color:cyan;"><h4>Slin </h4></button></a>
-
-<a title="Sair" href="index.html" ><button style="background-color:#ff0;"><h4>Sai </h4></button></a>
-  
-
- </h4>   
-<br>           
-<div onclick="confetti()" align="center">
-                  <a  href="#"><b><font size="4"></font></b></a><font size="4"><b>
-                    - </b> <a  href="#A" ><b>#</b></a><b>                    
-                    - </b> <a  href="#A" ><b>A</b></a><b>
-                    - </b> <a  href="#B" ><b>B</b></a><b>
-                    - </b> <a  href="#C" ><b>C</b></a><b> 
-                    - </b> <a  href="#D" ><b>D</b></a><b> 
-                    - </b> <a  href="#E" ><b>E</b></a><b> 
-                    - </b> <a  href="#F" ><b>F</b></a><b> 
-                    - </b> <a  href="#G" ><b>G</b></a><b> 
-                    - </b> <a  href="#H" ><b>H</b></a><b> 
-                    - </b> <a  href="#I" ><b>I</b></a><b> 
-                    - </b> <a  href="#J" ><b>J</b></a><b> 
-                    - </b> <a  href="#K" ><b>K</b></a><b> 
-                    - </b> <a  href="#L" ><b>L</b></a><b> 
-                    - </b> <a  href="#M" ><b>M</b></a><b> 
-                    - </b> <a  href="#N" ><b>N</b></a><b> 
-                    - </b> <a  href="#O" ><b>O</b></a><b> 
-                    - </b> <a  href="#P" ><b>P</b></a><b> 
-                    - </b> <a  href="#Q" ><b>Q</b></a><b> 
-                    - </b> <a  href="#R" ><b>R</b></a><b> 
-                    - </b> <a  href="#S" ><b>S</b></a><b> 
-                    - </b> <a  href="#T" ><b>T</b></a><b> 
-                    - </b> <a  href="#U" ><b>U</b></a><b> 
-                    - </b> <a  href="#V" ><b>V</b></a><b> 
-                    - </b> <a  href="#W" ><b>W</b></a><b> 
-                    - </b> <a  href="#X" ><b>X</b></a><b> 
-                    - </b> <a  href="#Y" ><b>Y</b></a><b> 
-                    - </b> <a  href="#Z" ><b>Z</b></a></font></div>
-
-
+			
+			 <strong> &nbsp;&nbsp;<b style="background-color:blue;color:#ff7;"> Louvor e Wave</b> </strong>
+                 </div>
+      <a  href="#"><b><h2 size="3"></h2></b></a>&nbsp; &nbsp;  <h3 size="3"><b>
+                    - </b> <a  href="#A" ><b>A</b></a> &nbsp; &nbsp; <b>
+                    - </b> <a  href="#B" ><b>B</b></a> &nbsp; &nbsp;<b>
+                    - </b> <a  href="#C" ><b>C</b></a> &nbsp; &nbsp;<b> 
+                    - </b> <a  href="#D" ><b>D</b></a> &nbsp;&nbsp;  <b> 
+                    - </b> <a  href="#E" ><b>E</b></a> &nbsp; &nbsp; <b> 
+                    - </b> <a  href="#F" ><b>F</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#G" ><b>G</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#H" ><b>H</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#I" ><b>I</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#J" ><b>J</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#K" ><b>K</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#L" ><b>L</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#M" ><b>M</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#N" ><b>N</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#O" ><b>O</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#P" ><b>P</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#Q" ><b>Q</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#R" ><b>R</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#S" ><b>S</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#T" ><b>T</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#U" ><b>U</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#V" ><b>V</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#W" ><b>W</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#X" ><b>X</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#Y" ><b>Y</b></a>  &nbsp;&nbsp;<b> 
+                    - </b> <a  href="#Z" ><b>Z</b></a>  &nbsp;&nbsp;</h3></div>
+ 
                       </td>                      
                     </tr>
                   </tbody>
                 </table>
-	
-<div id="info"></div>
-   </div>      
+                            
+        </tbody></table>
+        
+    </div>
+</div>
 
-	
-		
-               </div>
-            
-				
-         <br>		      
-                       
- 
+<div id="musicas">
+<p id="A"><b>A</b></p> 
 
 
-  <div class="infor"> 
-    <div align="center"><font   color="000000" size="4"><b></b></font></div>
-  </div>
 
-<br>
-<div class="music"></div>
-
-<p id="">#</p>
-<p id="A">A</p>
 
 <div align="center"> 
   <div class="artista">
