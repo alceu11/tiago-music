@@ -156,6 +156,21 @@ margin-left: 5px;
 </head>
 <body style="background-color: #000000 ; color: white ;font-size: 15px;">
 <br>
+<header id="topo">
+        <div id="tocador" style="text-align: center; padding-top: 10px;">
+            <audio id="video_player"><source id="sorce" src="" type="audio/mp3"></audio>
+         <div class="player_wrapper">
+                <div class="player_controls">
+                    <input type="image" src="Image/play.png" id="play_button" onclick="controleGeral()">
+                    <div id="div_timer"><span id="cuTimer">00:00</span> / <span id="toTimer">00:00</span></div>
+                    <progress id="progress-bar" max="100" value="0"></progress>
+                    
+                </div>
+            </div>
+		 
+        </div>
+        <div align="center" id="info" style="color:#4945ba; font-weight:bold; padding:5px; font-size: 12px; min-height: 15px;"></div>
+    </header>
 
  
 
@@ -229,12 +244,9 @@ margin-left: 5px;
                     </tr>
                   </tbody>
                 </table>
-					<div id="topo">
-<div id="tocador" style="text-align:  center;">
-    <audio id="audioPlayer" controls autoplay></audio>
-    </div>
+	
 <div id="info"></div>
-    </div></div>      
+   </div>      
 
 	
 		
@@ -316,18 +328,14 @@ margin-left: 5px;
   
 <a target="_blank" href="https://gataselvagem-music.com.br/Mp3/Nacionais//14_Bis_-_Todo_O_Azul_Do_Mar.mp3"  class="sm2_link">Tod.Azul Mar</a>&nbsp; 
  
-				<div class="test">
-					<textarea class="js-copytextarea">http://gataselvagem-music.com.br//Mp3/Nacionais//14_Bis_-_Todo_O_Azul_Do_Mar.mp3</textarea>
-				</div>
-				<div class="test2">
-					<button class="js-textareacopybtn">Copiar</button>
-    			</div>
+				
 			</li>
 		</ul>
 		
 		<div id="sm2-container"></div><br><font color="white" size="4"><b>6L6</b></font>
 		<ul class="graphic">
 			<li>
+			<button onclick="tocar('https://gataselvagem-music.com.br/Mp3/Nacionais//6L6_-_Declaracao.mp3');"> >🎧--</button>
 				<a  href="https://gataselvagem-music.com.br/Mp3/Nacionais//6L6_-_Declaracao.mp3" target="_blank" class="sm2_link">Declaracao</a>&nbsp;&nbsp;
 				<div class="test">
 					<textarea class="js-copytextarea">http://gataselvagem-music.com.br//Mp3/Nacionais//6L6_-_Declaracao.mp3</textarea>
