@@ -311,6 +311,9 @@ margin-left: 5px;
 		<ul class="graphic">
 			<li>
   
+  
+   <button class="btn-copiar" onclick="copiarLink(this, 'https://gataselvagem-music.com.br/Mp3/Nacionais//14_Bis_-_Todo_O_Azul_Do_Mar.mp3')">Copie Azul</button>
+  
 <a target="_blank" href="https://gataselvagem-music.com.br/Mp3/Nacionais//14_Bis_-_Todo_O_Azul_Do_Mar.mp3"  class="sm2_link">Tod.Azul Mar</a>&nbsp; 
  
 				<div class="test">
@@ -9699,8 +9702,63 @@ Detonautas <br><br>
 			</li>
 		</ul>
 
+<script>
+var player = document.getElementById('video_player');
+var btnTopo = document.getElementById('play_button');
+var iconeAtivo = null;
 
-<p></p>
+function tocar(el, url, art, mus) {
+    if (player.src.includes(url)) { controleGeral(); return; }
+    if (iconeAtivo) iconeAtivo.src = "Image/icon_play.png";
+    player.src = url;
+    player.play();
+    btnTopo.src = "Image/pause.png";
+    iconeAtivo = el.querySelector('img');
+    iconeAtivo.src = "Image/icon_pause.png";
+    document.getElementById('info').innerHTML = art + " - " + mus;
+}
+
+function controleGeral() {
+    if (player.paused) { 
+        player.play(); btnTopo.src = "Image/pause.png"; 
+        if (iconeAtivo) iconeAtivo.src = "Image/icon_pause.png"; 
+    } else { 
+        player.pause(); btnTopo.src = "Image/play.png"; 
+        if (iconeAtivo) iconeAtivo.src = "Image/icon_play.png"; 
+    }
+}
+
+function copiarLink(botao, texto) {
+    navigator.clipboard.writeText(texto).then(function() {
+        var balao = document.createElement('div');
+        balao.className = 'notificacao';
+        balao.innerHTML = 'Copiado';
+        document.body.appendChild(balao);
+        
+        var rect = botao.getBoundingClientRect();
+        balao.style.left = (rect.left) + 'px';
+        balao.style.top = (rect.top + window.scrollY - 15) + 'px';
+        
+        setTimeout(function() { balao.remove(); }, 800);
+    });
+}
+
+player.ontimeupdate = function() {
+    var prog = document.getElementById('progress-bar');
+    var cur = document.getElementById('cuTimer');
+    var dur = document.getElementById('toTimer');
+    if (player.duration) {
+        prog.value = (player.currentTime / player.duration) * 100;
+        var mD = Math.floor(player.duration / 60);
+        var sD = Math.floor(player.duration % 60);
+        dur.innerHTML = (mD<10?"0":"")+mD+":"+(sD<10?"0":"")+sD;
+    }
+    var mC = Math.floor(player.currentTime / 60);
+    var sC = Math.floor(player.currentTime % 60);
+    cur.innerHTML = (mC<10?"0":"")+mC+":"+(sC<10?"0":"")+sC;
+};
+</script>
+
 
 </body>
 </html>
